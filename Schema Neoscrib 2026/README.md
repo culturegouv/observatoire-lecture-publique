@@ -11,6 +11,6 @@ L'application utilisée pour collecter les données (Neoscrib) rassemble des don
 Cette application collecte des données au niveau des bibliothèques (lieux de lecture, ou "lieux") et des réseaux de bibliothèques, baptisés "unités de coopération", ou UC.
 
 ## Ce répertoire propose donc :
-* la transformation en schémas Table Schema des formats d'exports bruts de l'application Neoscrib ;
+* la transformation en schémas Table Schema (Frictionless, https://specs.frictionlessdata.io/table-schema/) des formats d'exports bruts de l'application Neoscrib ;
 * les différents schémas des données exportées depuis l'application utilisée pour les enquêtes annuelles, avec l'année de leur mise en service ;
 * la documentation associée dans chaque fichier donne la définition des champs, les libellés, les règles de saisie, les formats attendus.
