@@ -1,0 +1,49 @@
+"code";"libellé";"description";"type";"format";"minimum";"maximum";"enum";"granularity";"constraint";"reference"
+"GenUID";"gen_uid";"Identifiant interne Neoscrib de la bibliothèque";"string";"default";;;;"annuel";;
+"Type répondant";"type_repondant";"Niveau de réponse, bibliothèque ou réseau de bibliothèques";"string";"default";;;"Lieu, UC";"annuel";;
+"Code";"code_bib";"Code de la bibliothèque";"string";"default";;;;"annuel";"unique";"Neoscrib"
+"Nom de l'établissement";"nom_etablissement";"Nom de l'établissement";"string";"default";;;;"annuel";;
+"{Libellé 1}&nbsp;";"libelle_etablissement";"Libellé de l’établissement de tutelle";"string";"default";;;;"annuel";;
+"Complément";"complement_nom_etablissement";"Complément au nom de l'établissement";"string";"default";;;;"annuel";;
+"Adresse";"adresse";"Adresse de l’établissement (concaténation du numéro, dyu type et de la voie)";"string";"default";;;;"annuel";;
+"N° / Type voie / Nom voie";"numero_voie";"Numéro dans la voie";"string";"default";;;;"annuel";;
+"{Type voie}";"type_voie";"Type de voie";"string";"default";;;;"annuel";;
+"{Nom voie}";"nom_voie";"Nom de la voie";"string";"default";;;;"annuel";;"INSEE"
+"Région / Code";"region";"Nom de la région";"string";"default";;;;"annuel";"unique";"INSEE"
+"{Code Région}";"code_region";"Code de la région";"integer";"default";;;;"annuel";"unique";"INSEE"
+"Département / Code";"departement";"Nom du département";"string";"default";;;;"annuel";"unique";"INSEE"
+"{Code Département}";"code_departement";"Code du département";"integer";"default";;;;"annuel";"unique";"INSEE"
+"CP / Ville / CEDEX";"code_postal";"Code postal";"string";"default";;;;"annuel";;"INSEE"
+"{Ville}";"ville";"Ville";"string";"default";;;;"annuel";;"INSEE"
+"{Cedex}";"cedex";"Cedex";"string";"default";;;;"annuel";;
+"Code insee commune";"code_insee_commune";"Code INSEE de la collectivité";"integer";"default";;;;"annuel";"unique";"INSEE"
+"Population commune";"population_commune";"Population de la commune de la bibliothèque";"integer";"default";;;;"annuel";;"INSEE"
+"Année recensement";"recensement";"Année du dernier recensement";"date";"default";;;;"annuel";;"INSEE"
+"Code EPCI";"code_epci";"Code EPCI";"integer";"default";;;;"annuel";"unique";"INSEE"
+"Nom EPCI";"epci";"Nom de l’EPCI";"string";"default";;;;"annuel";;"INSEE"
+"Nb EPCI";"nb_epci";"Nombre d’EPCI";"integer";"default";;;;"annuel";;"INSEE"
+"Population EPCI";"pop_epci";"Population de l’EPCI";"integer";"default";;;;"annuel";;"INSEE"
+"Téléphone";"telephone";"Numéro de téléphone de l’accueil de la bibliothèque";"integer";"default";;;;"annuel";;
+"Fax";"fax";"Numéro de fax (obsolète)";"integer";"default";;;;"annuel";;
+"Email";"courriel";"Adresse de courriel générique de l'établissement";"string";"default";;;;"annuel";"email";
+"{Genre}";"civilite_direction";"Genre de la personne responsable de la bibliothèque";"string";"default";;;"M., Mme";"annuel";;
+"Nom";"nom_direction";"Nom de la personne responsable de la bibliothèque";"string";"default";;;;"annuel";;
+"Prénom";"prenom_direction";"Prénom de la personne responsable de la bibliothèque";"string";"default";;;;"annuel";;
+"Statut / grade";"statut_direction";"Statut et grade de la personne responsable de la bibliothèque";"string";"default";;;;"annuel";;
+"Longitude";"longitude";"Longitude de la bibliothèque";"lon";"default";;;;"annuel";;"INSEE"
+"Latitude";"latitude";"Latitude de la bibliothèque";"lat";"default";;;;"annuel";;"INSEE"
+"Rattachement administratif";"rattachement";"Rattachement administratif de la bibliothèque";"string";"default";;;"Commune, Association, EPCI, SIVOM, Département";"annuel";;
+"Biblio. dép. rattachement";"bd_rattachement";"Code de la bibliothèque départementale de rattachement";"string";"default";;;;"annuel";"unique";
+"ID bibliothèque départementale de rattachement";"id_bd_rattachement";"Identifiant interne Neoscrib de la bibliothèque départementale de rattachement";"string";"default";;;;"annuel";"unique";
+"Nature du lieu";"nature_lieu";"Nature du lieu occupé par la bibliothèque";"string";"default";;;"Bâtiment ouvert, Bibliobus, Lieu uniquement administratif, Réserve de documents non ouverte au public";"annuel";;
+"Référent de lieu";"referent_lieu";"Structure référente pour l’enquête annuelle";"string";"default";;;"OLP, Administrateur partenaire";"annuel";;
+"Type de rapport";"type_rapport";"Type de rapport pour l’enquête annuelle";"string";"default";;;"Basique, Patrimoine, Très abrégé";"annuel";;
+"Statut";"statut_activite";"Statut d’activité de la bibliothèque";"string";"default";;;"Actif, Inactif";"annuel";;
+"Code Département de la BD pour contrôle";"code_departement_bd";"Code du département de la bibliothèque départementale de rattachement";"string";"default";;;;"annuel";"unique";"INSEE"
+"Commentaire";"commentaire";"Commentaire sur le bâtiment de la bibliothèque";"string";"default";;;;"annuel";;
+"Date dernière modification";"date_modification";"Date de la dernière modification de la fiche lieu";"date";"default";;;;"quotidien";;
+"Autre Email";"courriel_alternatif";"Adresse de courriel générique de l'établissement";"string";"default";;;;"annuel";"email";
+"UC";"uc_rattachement";"Code de l’UC ou des UC de rattachement";"string";"default";;;;"annuel";;
+"Statut Rapport";"statut_rapport";"Etat du rapport";"string";"default";;;"Vide, en cours, validé, envoyé";"annuel";;
+"Taux";"taux_completude";"Taux de complétude du rapport";"integer";"default";;;;"annuel";;
+"Année des données";"annee_donnees";"Année des données collectées";"date";"default";;;;"annuel";;
