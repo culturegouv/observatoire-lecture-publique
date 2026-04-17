@@ -1,0 +1,341 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "neoscrib-2026-structure-uc",
+  "title": "Format Neoscrib 2026 – Structure Unités de Coopération",
+  "description": "Schéma des données de la structure des unités de coopération (UC), format Neoscrib 2026",
+  "fields": [
+    {
+      "name": "gen_uid",
+      "title": "GenUID",
+      "description": "Identifiant interne Neoscrib de l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "code_uc",
+      "title": "code_uc",
+      "description": "Code de l’unité de coopération",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "Neoscrib"
+    },
+    {
+      "name": "nom_uc",
+      "title": "nom_uc",
+      "description": "Nom de l’unité de coopération",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "Neoscrib"
+    },
+    {
+      "name": "type",
+      "title": "type",
+      "description": "Type de coopération ",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "1a",
+          "1a - 2a",
+          "1a - 2b",
+          "1b",
+          "1b - 2a",
+          "1b - 2b",
+          "2a",
+          "2b",
+          "3a",
+          "3b",
+          "3b - 1a",
+          "3b - 1a - 2a",
+          "3b - 1b",
+          "3b - 1b - 2a",
+          "3b - 1b - 2b",
+          "3b - 2a"
+        ]
+      }
+    },
+    {
+      "name": "coop_informatique",
+      "title": "coop_informatique",
+      "description": "Coopération informatique oui/non",
+      "type": "boolean"
+    },
+    {
+      "name": "coop_sigb",
+      "title": "coop_sigb",
+      "description": "SIGB mutualisé oui/non",
+      "type": "boolean"
+    },
+    {
+      "name": "coop_coordination",
+      "title": "coop_coordination",
+      "description": "Coordination de l’action culturelle oui/non",
+      "type": "boolean"
+    },
+    {
+      "name": "coop_acquisition",
+      "title": "coop_acquisition",
+      "description": "Acquisitions mutualisées oui/non",
+      "type": "boolean"
+    },
+    {
+      "name": "unite_administrative",
+      "title": "unite_administrative",
+      "description": "Type d’unité administrative de rattachement",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Municipale",
+          "Intercommunale"
+        ]
+      }
+    },
+    {
+      "name": "region",
+      "title": "region",
+      "description": "Nom de la région",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "code_region",
+      "title": "code_region",
+      "description": "Code de la région",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "departement",
+      "title": "departement",
+      "description": "Nom du département",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "code_departement",
+      "title": "code_departement",
+      "description": "Code du département",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "nom_epci",
+      "title": "nom_epci",
+      "description": "Nom de l’EPCI",
+      "type": "string",
+      "source": "INSEE"
+    },
+    {
+      "name": "code_epci",
+      "title": "code_epci",
+      "description": "Code de l’EPCI",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "pop_epci",
+      "title": "pop_epci",
+      "description": "Population de l’EPCI",
+      "type": "integer",
+      "source": "INSEE"
+    },
+    {
+      "name": "pop_uc",
+      "title": "pop_uc",
+      "description": "Population des communes appartenant à l’unité de coopération",
+      "type": "integer"
+    },
+    {
+      "name": "qui_suit_enquete",
+      "title": "qui_suit_enquete",
+      "description": "Structure référente pour l’enquête annuelle",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "OLP",
+          "Administrateur partenaire"
+        ]
+      }
+    },
+    {
+      "name": "lieu_referent_nom",
+      "title": "lieu_referent_nom",
+      "description": "Bibliothèque référente de l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "lieu_referent_GUID",
+      "title": "lieu_referent_GUID",
+      "description": "Adresse de la bibliothèque référente de l’unité de coopération ",
+      "type": "string"
+    },
+    {
+      "name": "lieu_referent_com",
+      "title": "lieu_referent_com",
+      "description": "Commune de la bibliothèque référente de l’unité de coopération ",
+      "type": "string"
+    },
+    {
+      "name": "lieu_referent_insee",
+      "title": "lieu_referent_insee",
+      "description": "Numéro INSEE de la commune de la bibliothèque référente de l’unité de coopération ",
+      "type": "string"
+    },
+    {
+      "name": "responsable_civilite",
+      "title": "responsable_civilite",
+      "description": "Civilité de la personne responsable de la bibliothèque référente",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "M.",
+          "Mme"
+        ]
+      }
+    },
+    {
+      "name": "responsable_nom",
+      "title": "responsable_nom",
+      "description": "Nom de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "responsable_prenom",
+      "title": "responsable_prenom",
+      "description": "Prénom de la personne responsable de la bibliothèque référente",
+      "type": "string"
+    },
+    {
+      "name": "responsable_statut",
+      "title": "responsable_statut",
+      "description": "Statut et grade de la personne responsable de la bibliothèque référente",
+      "type": "string"
+    },
+    {
+      "name": "responsable_remail",
+      "title": "responsable_remail",
+      "description": "Adresse de courriel de la personne responsable de la bibliothèque référente",
+      "type": "string",
+      "constraints": {
+        "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+      }
+    },
+    {
+      "name": "responsable_remail_autre",
+      "title": "responsable_remail_autre",
+      "description": "Adresse de courriel alternative",
+      "type": "string",
+      "constraints": {
+        "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+      }
+    },
+    {
+      "name": "statut_activite",
+      "title": "statut",
+      "description": "Statut d’activité de l’unité de coopération",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Actif",
+          "Inactif"
+        ]
+      }
+    },
+    {
+      "name": "commentaire",
+      "title": "commentaire",
+      "description": "Commentaire sur l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "avancement",
+      "title": "Avancement",
+      "description": "Niveau de remplissage du rapport",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Vide",
+          "0-100"
+        ]
+      }
+    },
+    {
+      "name": "nom_lieu",
+      "title": "nom_lieu",
+      "description": "Nom de la bibliothèque appartenant à l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "id_lieu",
+      "title": "id_lieu",
+      "description": "Identifiant interne Neoscrib de la bibliothèque appartenant à l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "commune_lieu",
+      "title": "commune_lieu",
+      "description": "Commune de la bibliothèque appartenant à l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "insee_lieu",
+      "title": "insee_lieu",
+      "description": "Numéro INSEE de la commune de la bibliothèque appartenant à l’unité de coopération",
+      "type": "integer",
+      "source": "INSEE"
+    },
+    {
+      "name": "code_lieu",
+      "title": "code_lieu",
+      "description": "Code Neoscrib de la bibliothèque appartenant à l’unité de coopération",
+      "type": "string"
+    },
+    {
+      "name": "statut_rapport",
+      "title": "Statut Rapport",
+      "description": "Etat du rapport sur l’unité de coopération",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Vide",
+          "en cours",
+          "validé",
+          "envoyé"
+        ]
+      }
+    },
+    {
+      "name": "taux_completude",
+      "title": "Taux",
+      "description": "Taux de remplissage du rapport",
+      "type": "integer"
+    },
+    {
+      "name": "annee_donnees",
+      "title": "Année des données",
+      "description": "Année des données collectées",
+      "type": "date",
+      "format": "default"
+    }
+  ],
+  "primaryKey": [
+    "gen_uid"
+  ]
+}

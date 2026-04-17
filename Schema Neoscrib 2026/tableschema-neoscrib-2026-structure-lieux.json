@@ -1,0 +1,420 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "neoscrib-2026-structure-lieux",
+  "title": "Format Neoscrib 2026 – Structure Lieux",
+  "description": "Schéma des données de la structure des lieux de bibliothèques, format Neoscrib 2026",
+  "fields": [
+    {
+      "name": "gen_uid",
+      "title": "GenUID",
+      "description": "Identifiant interne Neoscrib de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "type_repondant",
+      "title": "Type répondant",
+      "description": "Niveau de réponse, bibliothèque ou réseau de bibliothèques",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Lieu",
+          "UC"
+        ]
+      }
+    },
+    {
+      "name": "code_bib",
+      "title": "Code",
+      "description": "Code de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "Neoscrib"
+    },
+    {
+      "name": "nom_etablissement",
+      "title": "Nom de l'établissement",
+      "description": "Nom de l'établissement",
+      "type": "string"
+    },
+    {
+      "name": "libelle_etablissement",
+      "title": "{Libellé 1}&nbsp;",
+      "description": "Libellé de l’établissement de tutelle",
+      "type": "string"
+    },
+    {
+      "name": "complement_nom_etablissement",
+      "title": "Complément",
+      "description": "Complément au nom de l'établissement",
+      "type": "string"
+    },
+    {
+      "name": "adresse",
+      "title": "Adresse",
+      "description": "Adresse de l’établissement (concaténation du numéro, dyu type et de la voie)",
+      "type": "string"
+    },
+    {
+      "name": "numero_voie",
+      "title": "N° / Type voie / Nom voie",
+      "description": "Numéro dans la voie",
+      "type": "string"
+    },
+    {
+      "name": "type_voie",
+      "title": "{Type voie}",
+      "description": "Type de voie",
+      "type": "string"
+    },
+    {
+      "name": "nom_voie",
+      "title": "{Nom voie}",
+      "description": "Nom de la voie",
+      "type": "string",
+      "source": "INSEE"
+    },
+    {
+      "name": "region",
+      "title": "Région / Code",
+      "description": "Nom de la région",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "code_region",
+      "title": "{Code Région}",
+      "description": "Code de la région",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "departement",
+      "title": "Département / Code",
+      "description": "Nom du département",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "code_departement",
+      "title": "{Code Département}",
+      "description": "Code du département",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "code_postal",
+      "title": "CP / Ville / CEDEX",
+      "description": "Code postal",
+      "type": "string",
+      "source": "INSEE"
+    },
+    {
+      "name": "ville",
+      "title": "{Ville}",
+      "description": "Ville",
+      "type": "string",
+      "source": "INSEE"
+    },
+    {
+      "name": "cedex",
+      "title": "{Cedex}",
+      "description": "Cedex",
+      "type": "string"
+    },
+    {
+      "name": "code_insee_commune",
+      "title": "Code insee commune",
+      "description": "Code INSEE de la collectivité",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "population_commune",
+      "title": "Population commune",
+      "description": "Population de la commune de la bibliothèque",
+      "type": "integer",
+      "source": "INSEE"
+    },
+    {
+      "name": "recensement",
+      "title": "Année recensement",
+      "description": "Année du dernier recensement",
+      "type": "date",
+      "format": "default",
+      "source": "INSEE"
+    },
+    {
+      "name": "code_epci",
+      "title": "Code EPCI",
+      "description": "Code EPCI",
+      "type": "integer",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "epci",
+      "title": "Nom EPCI",
+      "description": "Nom de l’EPCI",
+      "type": "string",
+      "source": "INSEE"
+    },
+    {
+      "name": "nb_epci",
+      "title": "Nb EPCI",
+      "description": "Nombre d’EPCI",
+      "type": "integer",
+      "source": "INSEE"
+    },
+    {
+      "name": "pop_epci",
+      "title": "Population EPCI",
+      "description": "Population de l’EPCI",
+      "type": "integer",
+      "source": "INSEE"
+    },
+    {
+      "name": "telephone",
+      "title": "Téléphone",
+      "description": "Numéro de téléphone de l’accueil de la bibliothèque",
+      "type": "integer"
+    },
+    {
+      "name": "fax",
+      "title": "Fax",
+      "description": "Numéro de fax (obsolète)",
+      "type": "integer"
+    },
+    {
+      "name": "courriel",
+      "title": "Email",
+      "description": "Adresse de courriel générique de l'établissement",
+      "type": "string",
+      "constraints": {
+        "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+      }
+    },
+    {
+      "name": "civilite_direction",
+      "title": "{Genre}",
+      "description": "Genre de la personne responsable de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "M.",
+          "Mme"
+        ]
+      }
+    },
+    {
+      "name": "nom_direction",
+      "title": "Nom",
+      "description": "Nom de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "prenom_direction",
+      "title": "Prénom",
+      "description": "Prénom de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "statut_direction",
+      "title": "Statut / grade",
+      "description": "Statut et grade de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "longitude",
+      "title": "Longitude",
+      "description": "Longitude de la bibliothèque",
+      "type": "number",
+      "constraints": {
+        "minimum": -180,
+        "maximum": 180
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "latitude",
+      "title": "Latitude",
+      "description": "Latitude de la bibliothèque",
+      "type": "number",
+      "constraints": {
+        "minimum": -90,
+        "maximum": 90
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "rattachement",
+      "title": "Rattachement administratif",
+      "description": "Rattachement administratif de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Commune",
+          "Association",
+          "EPCI",
+          "SIVOM",
+          "Département"
+        ]
+      }
+    },
+    {
+      "name": "bd_rattachement",
+      "title": "Biblio. dép. rattachement",
+      "description": "Code de la bibliothèque départementale de rattachement",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      }
+    },
+    {
+      "name": "id_bd_rattachement",
+      "title": "ID bibliothèque départementale de rattachement",
+      "description": "Identifiant interne Neoscrib de la bibliothèque départementale de rattachement",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      }
+    },
+    {
+      "name": "nature_lieu",
+      "title": "Nature du lieu",
+      "description": "Nature du lieu occupé par la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Bâtiment ouvert",
+          "Bibliobus",
+          "Lieu uniquement administratif",
+          "Réserve de documents non ouverte au public"
+        ]
+      }
+    },
+    {
+      "name": "referent_lieu",
+      "title": "Référent de lieu",
+      "description": "Structure référente pour l’enquête annuelle",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "OLP",
+          "Administrateur partenaire"
+        ]
+      }
+    },
+    {
+      "name": "type_rapport",
+      "title": "Type de rapport",
+      "description": "Type de rapport pour l’enquête annuelle",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Basique",
+          "Patrimoine",
+          "Très abrégé"
+        ]
+      }
+    },
+    {
+      "name": "statut_activite",
+      "title": "Statut",
+      "description": "Statut d’activité de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Actif",
+          "Inactif"
+        ]
+      }
+    },
+    {
+      "name": "code_departement_bd",
+      "title": "Code Département de la BD pour contrôle",
+      "description": "Code du département de la bibliothèque départementale de rattachement",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "INSEE"
+    },
+    {
+      "name": "commentaire",
+      "title": "Commentaire",
+      "description": "Commentaire sur le bâtiment de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "date_modification",
+      "title": "Date dernière modification",
+      "description": "Date de la dernière modification de la fiche lieu",
+      "type": "date",
+      "format": "default"
+    },
+    {
+      "name": "courriel_alternatif",
+      "title": "Autre Email",
+      "description": "Adresse de courriel générique de l'établissement",
+      "type": "string",
+      "constraints": {
+        "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+      }
+    },
+    {
+      "name": "uc_rattachement",
+      "title": "UC",
+      "description": "Code de l’UC ou des UC de rattachement",
+      "type": "string"
+    },
+    {
+      "name": "statut_rapport",
+      "title": "Statut Rapport",
+      "description": "Etat du rapport",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Vide",
+          "en cours",
+          "validé",
+          "envoyé"
+        ]
+      }
+    },
+    {
+      "name": "taux_completude",
+      "title": "Taux",
+      "description": "Taux de complétude du rapport",
+      "type": "integer"
+    },
+    {
+      "name": "annee_donnees",
+      "title": "Année des données",
+      "description": "Année des données collectées",
+      "type": "date",
+      "format": "default"
+    }
+  ],
+  "primaryKey": [
+    "gen_uid"
+  ]
+}
