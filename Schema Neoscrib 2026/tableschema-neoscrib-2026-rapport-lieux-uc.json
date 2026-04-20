@@ -1,0 +1,3995 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "neoscrib-2026-rapport-lieux-uc",
+  "title": "Format Neoscrib 2026 – Rapport Lieux (vue UC)",
+  "description": "Schéma des données du rapport annuel des bibliothèques dans la vue unités de coopération (Lieux-UC), format Neoscrib 2026",
+  "fields": [
+    {
+      "name": "commune_bib",
+      "title": "BM",
+      "description": "Commune de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "type_rapport",
+      "title": "Type rapport",
+      "description": "Type de rapport : abrégé / basique / patrimoine",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "abrégé",
+          "basique",
+          "patrimoine"
+        ]
+      }
+    },
+    {
+      "name": "etat_avancement",
+      "title": "Avancement",
+      "description": "Etat d’avancement du remplissage du rapport",
+      "type": "integer",
+      "constraints": {
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    {
+      "name": "typologie",
+      "title": "Typologie",
+      "description": "Typologie des bibliothèques, après 2023",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      }
+    },
+    {
+      "name": "typologie_2c",
+      "title": "Typologie2C",
+      "description": "Typologie des bibliothèques, avant 2023",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "B1",
+          "B2",
+          "B3",
+          "B4",
+          "B5"
+        ]
+      }
+    },
+    {
+      "name": "code_bib",
+      "title": "Code",
+      "description": "Code de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "unique": true
+      },
+      "source": "Neoscrib"
+    },
+    {
+      "name": "nom_etablissement",
+      "title": "A101",
+      "description": "Nom de l'établissement",
+      "type": "string"
+    },
+    {
+      "name": "libelle_etablissement",
+      "title": "A102",
+      "description": "Complément au nom de l’établissement",
+      "type": "string"
+    },
+    {
+      "name": "complement_adresse",
+      "title": "A103",
+      "description": "Complément d'adresse",
+      "type": "string"
+    },
+    {
+      "name": "numero_voie",
+      "title": "A104",
+      "description": "N°",
+      "type": "string"
+    },
+    {
+      "name": "type_voie",
+      "title": "A105",
+      "description": "Type voie",
+      "type": "string"
+    },
+    {
+      "name": "nom_voie",
+      "title": "A106",
+      "description": "Nom voie",
+      "type": "string"
+    },
+    {
+      "name": "code_postal",
+      "title": "A107",
+      "description": "Code postal",
+      "type": "integer"
+    },
+    {
+      "name": "ville",
+      "title": "A108",
+      "description": "Ville",
+      "type": "string"
+    },
+    {
+      "name": "cedex",
+      "title": "A109",
+      "description": "Cedex",
+      "type": "string"
+    },
+    {
+      "name": "telephone",
+      "title": "A112",
+      "description": "Téléphone *",
+      "type": "integer"
+    },
+    {
+      "name": "fax",
+      "title": "A113",
+      "description": "Fax - Obsolète - ne pas utiliser",
+      "type": "string",
+      "deprecated": true
+    },
+    {
+      "name": "courriel",
+      "title": "A114",
+      "description": "Adresse de courriel générique de l'établissement",
+      "type": "string",
+      "format": "email",
+      "constraints": {
+        "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+      }
+    },
+    {
+      "name": "site_internet",
+      "title": "A115",
+      "description": "Adresse du site Internet de la bibliothèque",
+      "type": "string",
+      "format": "uri"
+    },
+    {
+      "name": "statut_site_internet",
+      "title": "A116",
+      "description": "Statut site",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Propre",
+          "Page sur le site de la collectivité",
+          "Page sur le site de la bibliothèque départementale"
+        ]
+      }
+    },
+    {
+      "name": "informations_adresse_mail",
+      "title": "A119",
+      "description": "La bibliothèque accepte que son adresse mail principale soit utilisée pour recevoir des informations professionnelles en provenance du Ministère de la Culture.",
+      "type": "boolean"
+    },
+    {
+      "name": "site_internet_accessible",
+      "title": "A121",
+      "description": "La bibliothèque a-t-elle déposé une attestation de conformité de son site web aux exigences du Référentiel général d'accessibilité pour les administrations (RGAA) ?",
+      "type": "boolean"
+    },
+    {
+      "name": "civilite_direction",
+      "title": "A130",
+      "description": "Civilité de la personne responsable de la bibliothèque",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "M.",
+          "Mme"
+        ]
+      }
+    },
+    {
+      "name": "nom_direction",
+      "title": "A131",
+      "description": "Nom de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "prenom_direction",
+      "title": "A132",
+      "description": "Prénom de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "statut_direction",
+      "title": "A133",
+      "description": "Statut et grade de la personne responsable de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "population_collectivite",
+      "title": "A200",
+      "description": "Population de la collectivité de rattachement (commune ou groupement de communes)",
+      "type": "integer"
+    },
+    {
+      "name": "population_etablissement",
+      "title": "A203",
+      "description": "Population effective desservie par l’établissement",
+      "type": "integer"
+    },
+    {
+      "name": "amplitude_horaire",
+      "title": "C101",
+      "description": "Nombre d'heures d'ouverture hebdomadaires tout public",
+      "type": "integer",
+      "constraints": {
+        "minimum": 0,
+        "maximum": 168
+      }
+    },
+    {
+      "name": "nb_jours_ouverture_annuels",
+      "title": "C102",
+      "description": "Nombre de jours d'ouverture annuels",
+      "type": "integer",
+      "constraints": {
+        "minimum": 0,
+        "maximum": 365
+      }
+    },
+    {
+      "name": "nb_places",
+      "title": "C103",
+      "description": "Nombre de places assises disponibles",
+      "type": "integer"
+    },
+    {
+      "name": "nb_postes_informatiques_publics",
+      "title": "C106",
+      "description": "Nombre de postes informatiques publics avec accès internet",
+      "type": "integer"
+    },
+    {
+      "name": "nb_postes_informatiques_pro",
+      "title": "C108",
+      "description": "Nombre de postes informatiques professionnels avec accès internet",
+      "type": "integer"
+    },
+    {
+      "name": "nb_imprimantes_en_acces_public",
+      "title": "C110",
+      "description": "Nombre d'imprimantes en accès public",
+      "type": "integer"
+    },
+    {
+      "name": "nb_bibliobus",
+      "title": "C112",
+      "description": "Nombre de bibliobus",
+      "type": "integer"
+    },
+    {
+      "name": "nb_jours_ouverture_hebdos",
+      "title": "C115",
+      "description": "Nombre de jours d’ouverture hebdomadaires",
+      "type": "integer",
+      "constraints": {
+        "minimum": 0,
+        "maximum": 7
+      }
+    },
+    {
+      "name": "ouverture_le_dimanche",
+      "title": "C116",
+      "description": "La bibliothèque est-elle ouverte le dimanche ?",
+      "type": "boolean"
+    },
+    {
+      "name": "nb_tablettes_mises_a_disposition",
+      "title": "C117",
+      "description": "Tablettes mises à la disposition du public",
+      "type": "integer"
+    },
+    {
+      "name": "nb_liseuses_mises_a_disposition",
+      "title": "C118",
+      "description": "Liseuses mises à la disposition du public",
+      "type": "integer"
+    },
+    {
+      "name": "nb_bornes_decoute",
+      "title": "C119",
+      "description": "Bornes d’écoute",
+      "type": "integer"
+    },
+    {
+      "name": "connexion_wifi",
+      "title": "C120",
+      "description": "Accès wifi",
+      "type": "boolean"
+    },
+    {
+      "name": "nb_consoles_jeux_video",
+      "title": "C121",
+      "description": "Nombre de consoles de jeux vidéo",
+      "type": "integer"
+    },
+    {
+      "name": "catalogue_informatise",
+      "title": "C201",
+      "description": "Le catalogue de la bibliothèque est-il informatisé ?",
+      "type": "boolean"
+    },
+    {
+      "name": "nb_notices_catalogue",
+      "title": "C202",
+      "description": "Nombre total de notices au catalogue",
+      "type": "integer"
+    },
+    {
+      "name": "nom_et_version_sigb",
+      "title": "C206",
+      "description": "Nom et version du système de gestion de la bibliothèque",
+      "type": "string"
+    },
+    {
+      "name": "surface",
+      "title": "C301",
+      "description": "Surface utile nette totale en m2",
+      "type": "integer",
+      "constraints": {
+        "maximum": 50000
+      }
+    },
+    {
+      "name": "batiment_accessible",
+      "title": "C309",
+      "description": "Votre bâtiment est-il accessible au sens de la loi du 11 février 2005 ?",
+      "type": "boolean"
+    },
+    {
+      "name": "impr_adultes_fonds",
+      "title": "D101",
+      "description": "Imprimés - Adultes - Livres imprimés - UM - Fonds (hors desserte BD)",
+      "type": "integer"
+    },
+    {
+      "name": "impr_adultes_acquisitions",
+      "title": "D102",
+      "description": "Imprimés - Adultes - Livres imprimés - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "impr_adultes_eliminations",
+      "title": "D103",
+      "description": "Imprimés - Adultes - Livres imprimés - UM - Eliminations",
+      "type": "integer"
+    },
+    {
+      "name": "impr_enfants_fonds",
+      "title": "D116",
+      "description": "Imprimés - Enfants - Livres imprimés - UM - Fonds (hors desserte BD)",
+      "type": "integer"
+    },
+    {
+      "name": "impr_enfants_acquisitions",
+      "title": "D117",
+      "description": "Imprimés - Enfants - Livres imprimés - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "impr_enfants_eliminations",
+      "title": "D118",
+      "description": "Imprimés - Enfants - Livres imprimés - UM - Eliminations",
+      "type": "integer"
+    },
+    {
+      "name": "nb_total_livres_fonds",
+      "title": "D128",
+      "description": "Imprimés - Total - Livres imprimés - UM - Fonds (hors desserte BD)",
+      "type": "integer"
+    },
+    {
+      "name": "nb_total_livres_acquisitions",
+      "title": "D129",
+      "description": "Imprimés - Total - Livres imprimés - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "nb_total_livres_eliminations",
+      "title": "D130",
+      "description": "Imprimés - Total - Livres imprimés - UM - Eliminations",
+      "type": "integer"
+    },
+    {
+      "name": "nb_livres_dons",
+      "title": "D131",
+      "description": "Imprimés - Total - Livres imprimés - dont nombre de dons (ou autres acquisitions à titre gracieux, …) - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "impr_enfants_depot_bd",
+      "title": "D142",
+      "description": "Imprimés - Enfants - Livres imprimés - UM - En dépôt de la BD au 31 décembre 2023",
+      "type": "integer"
+    },
+    {
+      "name": "impr_total_depot_bd",
+      "title": "D143",
+      "description": "Imprimés -Total - Livres imprimés - UM - En dépôt de la BD au 31 décembre 2023",
+      "type": "integer"
+    },
+    {
+      "name": "impr_adultes_depot_bd",
+      "title": "D144",
+      "description": "Imprimés - Adultes - Livres imprimés - UM - En dépôt de la BD au 31 décembre 2023",
+      "type": "integer"
+    },
+    {
+      "name": "nb_abos_perios_impr_en_cours_adultes",
+      "title": "D201",
+      "description": "Publications en série en cours - Imprimées- Adultes - Abonnements",
+      "type": "integer"
+    },
+    {
+      "name": "nb_abos_perios_impr_en_cours_enfants",
+      "title": "D203",
+      "description": "Publications en série imprimées en cours - Imprimées - Enfants - Abonnements",
+      "type": "integer"
+    },
+    {
+      "name": "nb_abos_perios_impr_en_cours_total",
+      "title": "D211",
+      "description": "Publications en série imprimées en cours - Total - Abonnements",
+      "type": "integer"
+    },
+    {
+      "name": "pat_manuscrits_fonds_ml",
+      "title": "D301",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits - fonds - (ML)",
+      "type": "integer"
+    },
+    {
+      "name": "pat_manuscrits_acquisitions_ml",
+      "title": "D302",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits - acquisitions - (ML)",
+      "type": "integer"
+    },
+    {
+      "name": "pat_manuscrits_fonds_um",
+      "title": "D303",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits - fonds - (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "pat_manuscrits_acquisitions_um",
+      "title": "D304",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits - acquisitions - (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "documents_cartographiques_fonds_um",
+      "title": "D307",
+      "description": "Autres documents - Documents cartographiques - UM - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "documents_cartographiques_acquisitions_um",
+      "title": "D308",
+      "description": "Autres documents - Documents cartographiques - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "musique_imprimee_fonds_um",
+      "title": "D309",
+      "description": "Autres documents - Musique imprimée - UM - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "musique_imprimee_acquisitions_um",
+      "title": "D310",
+      "description": "Autres documents - Musique imprimée - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_graphiques_fonds_um",
+      "title": "D314",
+      "description": "Autres documents - Documents graphiques - UM - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "documents_graphiques_acquisitions_um",
+      "title": "D315",
+      "description": "Autres documents - Documents graphiques - UM - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "autres_documents_total_eliminations_um",
+      "title": "D320",
+      "description": "Autres documents - UM - Total éliminations autres documents",
+      "type": "integer"
+    },
+    {
+      "name": "autres_documents_total_fonds_um",
+      "title": "D321",
+      "description": "Autres documents - Totalisation Abrégé -Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "autres_documents_total_acquisitions_um",
+      "title": "D322",
+      "description": "Autres documents - Totalisation Abrégé -Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "autres_types_documents",
+      "title": "D331",
+      "description": "Est-ce que la bibliothèque possède d’autres types de documents ?",
+      "type": "boolean"
+    },
+    {
+      "name": "jeux_societe_fonds",
+      "title": "D332",
+      "description": "Jeux de société - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "jeux_societe_acquisitions",
+      "title": "D333",
+      "description": "Jeux de société - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "objets_fonds",
+      "title": "D334",
+      "description": "Objets - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "objets_acquisitions",
+      "title": "D335",
+      "description": "Objets - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "instruments_fonds",
+      "title": "D336",
+      "description": "Instruments - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "instruments_acquisitions",
+      "title": "D337",
+      "description": "Instruments - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "objets_numerique_fonds",
+      "title": "D338",
+      "description": "Objets numériques - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "objets_numerique_acquisitions",
+      "title": "D339",
+      "description": "Objets numériques - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "autres_types_documents_pretes_par_bd",
+      "title": "D340",
+      "description": "Autres types de documents prêtés par la BD",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_musique_fonds_um",
+      "title": "D401",
+      "description": "Documents audiovisuels sur support - Documents sonores : musique - Sur support (UM) - Total Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_musique_acquisitions_um",
+      "title": "D402",
+      "description": "Documents audiovisuels sur support - Documents sonores : musique - Sur support (UM) - Total Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_fonds_um",
+      "title": "D405",
+      "description": "Documents audiovisuels sur support - Documents sonores : livres enregistrés - Sur support (UM) -Total Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_acquisitions_um",
+      "title": "D406",
+      "description": "Documents audiovisuels sur support- Documents sonores : livres enregistrés - Sur support (UM) - Total Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_sonores_fonds_um",
+      "title": "D409",
+      "description": "Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - Total Fonds (hors desserte BD)",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_sonores_acquisitions_um",
+      "title": "D410",
+      "description": "Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - Total Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_video_fonds_um",
+      "title": "D411",
+      "description": "Documents audiovisuels sur support- Documents vidéo - Sur support (UM) - Total Fonds (hors desserte BD)",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_video_acquisitions_um",
+      "title": "D412",
+      "description": "Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Total Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_musique_eliminations_um",
+      "title": "D416",
+      "description": "Documents audiovisuels sur support - Documents sonores : musique: - Sur support (UM) - Total Éliminations",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_eliminations_um",
+      "title": "D417",
+      "description": "Documents audiovisuels sur support - Documents sonores : livres enregistrés -Sur support (UM) - Total Éliminations",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_sonores_eliminations_um",
+      "title": "D418",
+      "description": "Documents audiovisuels sur support - Total documents sonores - Sur support (UM) - Total éliminations",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_video_eliminations_um",
+      "title": "D419",
+      "description": "Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Total éliminations",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_adultes_fonds_um",
+      "title": "D423",
+      "description": "Documents audiovisuels sur support - Documents sonores : livres enregistrés - Sur support (UM) - Fonds adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_adultes_acquisitions_um",
+      "title": "D424",
+      "description": "Documents audiovisuels sur support- Documents sonores : livres enregistrés - Sur support (UM) - Acquisitions adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_adultes_eliminations_um",
+      "title": "D425",
+      "description": "Documents audiovisuels sur support- Documents sonores : livres enregistrés - Sur support (UM) - Eliminations adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_adultes_fonds_um",
+      "title": "D429",
+      "description": "Documents audiovisuels sur support- Documents vidéo - Sur support (UM) - Fonds adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_adultes_acquisitions_um",
+      "title": "D430",
+      "description": "Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Acquisitions adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_adultes_eliminations_um",
+      "title": "D431",
+      "description": "Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Eliminations adultes",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_jeunesse_fonds_um",
+      "title": "D435",
+      "description": "Documents audiovisuels sur support - Documents sonores : livres enregistrés jeunesse - Sur support (UM) - Fonds enfants",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_jeunesse_acquisitions_um",
+      "title": "D436",
+      "description": "Documents audiovisuels sur support- Documents sonores : livres enregistrés jeunesse - Sur support (UM) - Acquisitions enfants",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_livres_enregistres_jeunesse_eliminations_um",
+      "title": "D437",
+      "description": "Documents audiovisuels sur support- Documents sonores : livres enregistrés jeunesse - Sur support (UM) - Eliminations enfants",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_jeunesse_fonds_um",
+      "title": "D441",
+      "description": "Documents audiovisuels sur support- Documents vidéo jeunesse  - Sur support (UM) - Fonds",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_jeunesse_acquisitions_um",
+      "title": "D442",
+      "description": "Documents audiovisuels sur support - Documents vidéo jeunesse - Sur support (UM) - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_video_jeunesse_eliminations_um",
+      "title": "D443",
+      "description": "Documents audiovisuels sur support - Documents vidéo jeunesse - Sur support (UM) - Eliminations ",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_jeux_videos_fonds_um",
+      "title": "D444",
+      "description": "Documents audiovisuels sur support - Jeux vidéos - Sur support (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_jeux_video_acquisitions_um",
+      "title": "D445",
+      "description": "Documents audiovisuels sur support- Jeux vidéo - Sur support (UM) - Acquisitions",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_jeux_video_eliminations_um",
+      "title": "D446",
+      "description": "Documents audiovisuels sur support - Jeux vidéo - Sur support (UM) - Eliminations",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_sonores_depot_um",
+      "title": "D447",
+      "description": "Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - En dépôt de la BD au 31 décembre",
+      "type": "integer"
+    },
+    {
+      "name": "documents_audiovisuels_support_total_documents_video_depot_um",
+      "title": "D448",
+      "description": "Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - En dépôt de la BD au 31 décembre",
+      "type": "integer"
+    },
+    {
+      "name": "fonds_cd_dvd",
+      "title": "D450",
+      "description": "La bibliothèque possède-t-elle des fonds de CD ou de DVD ?",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_livres",
+      "title": "D521",
+      "description": "Ressources numériques acquises - bouquets - livres - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_livres_fournisseurs",
+      "title": "D522",
+      "description": "Ressources numériques acquises - bouquets - livres - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_livres_audio",
+      "title": "D523",
+      "description": "Ressources numériques acquises - bouquets - livres enregistrés - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_livres_fournisseurs",
+      "title": "D524",
+      "description": "Ressources numériques acquises - bouquets - livres enregistrés - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_musique",
+      "title": "D527",
+      "description": "Ressources numériques acquises - bouquets - musique - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_musique_fournisseurs",
+      "title": "D528",
+      "description": "Ressources numériques acquises - bouquets - musique - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_video",
+      "title": "D529",
+      "description": "Ressources numériques acquises - bouquets - vidéo - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_video_fournisseurs",
+      "title": "D530",
+      "description": "Ressources numériques acquises - bouquets - vidéo - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_presse",
+      "title": "D531",
+      "description": "Ressources numériques acquises - bouquets - presse - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_presse_fournisseurs",
+      "title": "D532",
+      "description": "Ressources numériques acquises - bouquets - presse - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_apprentissage",
+      "title": "D533",
+      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_apprentissag_fournisseurs",
+      "title": "D534",
+      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_acq_autres",
+      "title": "D537",
+      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_autres_fournisseurs",
+      "title": "D538",
+      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "ress_num_via_bd",
+      "title": "D551",
+      "description": "La bibliothèque propose-t-elle des ressources numériques via la BD ?",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq",
+      "title": "D552",
+      "description": "La bibliothèque propose-t-elle des ressources numériques propres ?",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_jv",
+      "title": "D553",
+      "description": "Jeux vidéo dématérialisés - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_acq_jv_fournisseurs",
+      "title": "D554",
+      "description": "Jeux vidéo dématérialisés - Nom des offres",
+      "type": "string"
+    },
+    {
+      "name": "bib_prod_ress_num",
+      "title": "D601",
+      "description": "La bibliothèque est-elle productrice de ressources numériques ( hors numérisation patrimoniale) ?",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_prod_musique",
+      "title": "D611",
+      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_prod_musique_nb_docs",
+      "title": "D613",
+      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores - nombre de documents produits dans l’année",
+      "type": "integer"
+    },
+    {
+      "name": "ress_num_prod_video",
+      "title": "D614",
+      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations) - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_prod_video_nb_docs",
+      "title": "D616",
+      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations) - nombre de documents produits dans l’année",
+      "type": "integer"
+    },
+    {
+      "name": "ress_num_prod_signalement",
+      "title": "D620",
+      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_prod_signalement_nb_docs",
+      "title": "D622",
+      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites - nombre de documents produits dans l’année",
+      "type": "integer"
+    },
+    {
+      "name": "ress_num_prod_ress_pedagogique",
+      "title": "D626",
+      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "ress_num_prod_ress_pedagogique_nb_docs",
+      "title": "D628",
+      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques - nombre de documents produits dans l’année",
+      "type": "integer"
+    },
+    {
+      "name": "collections_adaptees",
+      "title": "D701",
+      "description": "La bibliothèque propose-t-elle des collections adaptées ?",
+      "type": "boolean"
+    },
+    {
+      "name": "braille",
+      "title": "D702",
+      "description": "Braille",
+      "type": "boolean"
+    },
+    {
+      "name": "ouvrages_daisy",
+      "title": "D703",
+      "description": "Ouvrages en Daisy",
+      "type": "boolean"
+    },
+    {
+      "name": "revues_synthese_vocale",
+      "title": "D704",
+      "description": "Revues en synthèse vocale",
+      "type": "boolean"
+    },
+    {
+      "name": "livres_dvd_langue_des_signes",
+      "title": "D705",
+      "description": "Livres-DVD en langue des signes française (LSF)",
+      "type": "boolean"
+    },
+    {
+      "name": "livres_tactiles_ou_relief",
+      "title": "D706",
+      "description": "Livres tactiles ou en relief",
+      "type": "boolean"
+    },
+    {
+      "name": "autres_collections_adaptees",
+      "title": "D707",
+      "description": "Autres collections adaptées",
+      "type": "boolean"
+    },
+    {
+      "name": "livres_en_gros_caracteres",
+      "title": "D708",
+      "description": "Livres en gros caractères",
+      "type": "boolean"
+    },
+    {
+      "name": "livres_lus_commerce",
+      "title": "D709",
+      "description": "Livres lus du commerce",
+      "type": "boolean"
+    },
+    {
+      "name": "livres_num_accessibles",
+      "title": "D710",
+      "description": "Livres numériques accessibles",
+      "type": "boolean"
+    },
+    {
+      "name": "particuliers_total_inscrits_actifs",
+      "title": "E101",
+      "description": "Usagers - Particuliers - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_nouveaux_inscrits",
+      "title": "E102",
+      "description": "Usagers - Particuliers - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_emprunteurs_actifs",
+      "title": "E103",
+      "description": "Usagers - Particuliers - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_hommes_inscrits_actifs",
+      "title": "E104",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Hommes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_hommes_nouveaux_inscrits",
+      "title": "E105",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Hommes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_hommes_emprunteurs_actifs",
+      "title": "E106",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Hommes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_femmes_inscrits_actifs",
+      "title": "E107",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Femmes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_femmes_nouveaux_inscrits",
+      "title": "E108",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Femmes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_femmes_emprunteurs_actifs",
+      "title": "E109",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Femmes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_total_inscrits_actifs",
+      "title": "E110",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Total - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_total_nouveaux_inscrits",
+      "title": "E111",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Total - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_total_emprunteurs_actifs",
+      "title": "E112",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Total - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_hommes_inscrits_actifs",
+      "title": "E113",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Hommes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_hommes_nouveaux_inscrits",
+      "title": "E114",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Hommes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_hommes_emprunteurs_actifs",
+      "title": "E115",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Hommes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_femmes_inscrits_actifs",
+      "title": "E116",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Femmes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_femmes_nouveaux_inscrits",
+      "title": "E117",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Femmes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_femmes_emprunteurs_actifs",
+      "title": "E118",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Femmes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_total_inscrits_actifs",
+      "title": "E119",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Total - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_total_nouveaux_inscrits",
+      "title": "E120",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Total - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_total_emprunteurs_actifs",
+      "title": "E121",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Total - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_hommes_inscrits_actifs",
+      "title": "E122",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Hommes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_hommes_nouveaux_inscrits",
+      "title": "E123",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Hommes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_hommes_emprunteurs_actifs",
+      "title": "E124",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Hommes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_femmes_inscrits_actifs",
+      "title": "E125",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Femmes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_femmes_nouveaux_inscrits",
+      "title": "E126",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Femmes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_femmes_emprunteurs_actifs",
+      "title": "E127",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Femmes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_total_inscrits_actifs",
+      "title": "E128",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Total - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_total_nouveaux_inscrits",
+      "title": "E129",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Total - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_total_emprunteurs_actifs",
+      "title": "E130",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Total - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_hommes_inscrits_actifs",
+      "title": "E131",
+      "description": "Usagers - Particuliers - Total adultes Hommes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_hommes_nouveaux_inscrits",
+      "title": "E132",
+      "description": "Usagers - Particuliers - Total adultes Hommes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_hommes_emprunteurs_actifs",
+      "title": "E133",
+      "description": "Usagers - Particuliers - Total adultes Hommes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_femmes_inscrits_actifs",
+      "title": "E134",
+      "description": "Usagers - Particuliers - Total adultes Femmes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_femmes_nouveaux_inscrits",
+      "title": "E135",
+      "description": "Usagers - Particuliers - Total adultes Femmes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_femmes_emprunteurs_actifs",
+      "title": "E136",
+      "description": "Usagers - Particuliers - Total adultes Femmes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_inscrits_actifs",
+      "title": "E137",
+      "description": "Usagers - Particuliers - Total adultes - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_nouveaux_inscrits",
+      "title": "E138",
+      "description": "Usagers - Particuliers - Total adultes - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_emprunteurs_actifs",
+      "title": "E139",
+      "description": "Usagers - Particuliers - Total adultes - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_residents_commune_inscrits_actifs",
+      "title": "E140",
+      "description": "Usagers - Particuliers - dont résidents dans la commune ou les communes adhérentes au réseau - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_residents_commune_nouveaux_inscrits",
+      "title": "E141",
+      "description": "Usagers - Particuliers - dont résidents dans la commune ou les communes adhérentes au réseau - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_residents_commune_emprunteurs_actifs",
+      "title": "E142",
+      "description": "Usagers - Particuliers - dont résidents dans la commune ou les communes adhérentes au réseau - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "usagers_collectivites_nouveaux_inscrits",
+      "title": "E143",
+      "description": "Usagers - Collectivités - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "usagers_collectivites_emprunteurs_actifs",
+      "title": "E144",
+      "description": "Usagers - Collectivités - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "E145",
+      "title": "E145",
+      "description": "Obsolète - ne pas utiliser",
+      "type": "string",
+      "deprecated": true
+    },
+    {
+      "name": "E146",
+      "title": "E146",
+      "description": "Obsolète - ne pas utiliser",
+      "type": "string",
+      "deprecated": true
+    },
+    {
+      "name": "frequentation_annuelle",
+      "title": "E147",
+      "description": "Usagers - Fréquentation : entrées dans l'établissement durant l’année",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_nsp_genre_inscrits_actifs",
+      "title": "E148",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Ne se prononce pas - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_nsp_genre_nouveaux_inscrits",
+      "title": "E149",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Ne se prononce pas - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_enfants_nsp_genre_emprunteurs_actifs",
+      "title": "E150",
+      "description": "Usagers - Particuliers - dont Enfants (de 0 à 14 ans) Ne se prononce pas - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_nsp_genre_inscrits_actifs",
+      "title": "E151",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Ne se prononce pas - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_nsp_genre_nouveaux_inscrits",
+      "title": "E152",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Ne se prononce pas - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_nsp_genre_emprunteurs_actifs",
+      "title": "E153",
+      "description": "Usagers - Particuliers - dont Adultes (de 15 à 64 ans) Ne se prononce pas - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_nsp_genre_inscrits_actifs",
+      "title": "E154",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Ne se prononce pas - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_nsp_genre_nouveaux_inscrits",
+      "title": "E155",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Ne se prononce pas - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_adultes_65_nsp_genre_emprunteurs_actifs",
+      "title": "E156",
+      "description": "Usagers - Particuliers - dont Adultes (de 65 ans et plus) Ne se prononce pas - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_nsp_genre_inscrits_actifs",
+      "title": "E157",
+      "description": "Usagers - Particuliers - Total adultes - Ne se prononce pas - Inscrits actifs",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_nsp_genre_nouveaux_inscrits",
+      "title": "E158",
+      "description": "Usagers - Particuliers - Total adultes - Ne se prononce pas - dont nouveaux inscrits",
+      "type": "integer"
+    },
+    {
+      "name": "particuliers_total_adultes_nsp_genre_emprunteurs_actifs",
+      "title": "E159",
+      "description": "Usagers - Particuliers - Total adultes - Ne se prononce pas - dont emprunteurs actifs",
+      "type": "integer"
+    },
+    {
+      "name": "frequentation_semaine_test_printemps",
+      "title": "E160",
+      "description": "Fréquentation durant la semaine test de printemps",
+      "type": "integer"
+    },
+    {
+      "name": "frequentation_semaine_test_automne",
+      "title": "E161",
+      "description": "Fréquentation durant la semaine test d’automne",
+      "type": "integer"
+    },
+    {
+      "name": "prets_livres_adultes",
+      "title": "E201",
+      "description": "Prêts - Livres - Adultes",
+      "type": "integer"
+    },
+    {
+      "name": "prets_livres_enfants",
+      "title": "E202",
+      "description": "Prêts - Livres - Enfants",
+      "type": "integer"
+    },
+    {
+      "name": "prets_livres_total",
+      "title": "E203",
+      "description": "Prêts - Livres -Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_periodiques_imprimes_adultes",
+      "title": "E205",
+      "description": "Prêts - Publications en série imprimées - Adultes",
+      "type": "integer"
+    },
+    {
+      "name": "prets_periodiques_imprimes_enfants",
+      "title": "E206",
+      "description": "Prêts - Publications en série imprimées - Enfants",
+      "type": "integer"
+    },
+    {
+      "name": "prets_periodiques_imprimes_total",
+      "title": "E207",
+      "description": "Prêts - Publications en série imprimées - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_musique_total",
+      "title": "E211",
+      "description": "Prêts - Documents sonores : musique -Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_livres_adultes",
+      "title": "E213",
+      "description": "Prêts - Documents sonores : livres - Adultes",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_livres_enfants",
+      "title": "E214",
+      "description": "Prêts - Documents sonores : livres - Enfants",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_livres_total",
+      "title": "E215",
+      "description": "Prêts - Documents sonores : livres - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_video_adultes",
+      "title": "E217",
+      "description": "Prêts - Documents vidéo - Adultes",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_video_enfants",
+      "title": "E218",
+      "description": "Prêts - Documents vidéo - Enfants",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_video_total",
+      "title": "E219",
+      "description": "Prêts - Documents vidéo - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_autres_documents_adultes",
+      "title": "E221",
+      "description": "Prêts - Autres documents - Adultes",
+      "type": "integer"
+    },
+    {
+      "name": "prets_autres_documents_enfants",
+      "title": "E222",
+      "description": "Prêts - Autres documents - Enfants",
+      "type": "integer"
+    },
+    {
+      "name": "prets_autres_documents_total",
+      "title": "E223",
+      "description": "Prêts - Autres documents - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_total",
+      "title": "E235",
+      "description": "Prêts - Documents sonores -Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_adultes_total",
+      "title": "E237",
+      "description": "Prêts - Adultes - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_enfants_total",
+      "title": "E238",
+      "description": "Prêts - Enfants - Total",
+      "type": "integer"
+    },
+    {
+      "name": "prets_total",
+      "title": "E239",
+      "description": "Prêts - Total - Total",
+      "type": "integer"
+    },
+    {
+      "name": "collectivites_prets_total",
+      "title": "E240",
+      "description": "Prêts aux collectivités",
+      "type": "integer"
+    },
+    {
+      "name": "prets_livres_bd_total",
+      "title": "E241",
+      "description": "Prêts - Livres -Total - Dont prêt sur documents de la BD",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_bd_total",
+      "title": "E242",
+      "description": "Prêts - Documents sonores -Total - Dont prêt sur documents de la BD",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_video_bd_total",
+      "title": "E243",
+      "description": "Prêts - Documents vidéo -Total - Dont prêt sur documents de la BD",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_bd_total",
+      "title": "E245",
+      "description": "Prêts - Documents sonores : musique - Total - Dont prêts sur documents de la BD",
+      "type": "integer"
+    },
+    {
+      "name": "prets_documents_sonores_livres_bd_total",
+      "title": "E246",
+      "description": "Prêts - Documents sonores : livres - Total - Dont prêts sur documents de la BD",
+      "type": "integer"
+    },
+    {
+      "name": "prets_jeux_de_societe_total",
+      "title": "E247",
+      "description": "Prêts total de jeux de société",
+      "type": "integer"
+    },
+    {
+      "name": "prets_jeux_video_total",
+      "title": "E248",
+      "description": "Prêts total de jeux vidéo",
+      "type": "integer"
+    },
+    {
+      "name": "consultations_sur_place_total",
+      "title": "E301",
+      "description": "Autres types d'usage - Consultations sur place",
+      "type": "integer"
+    },
+    {
+      "name": "reservations_total",
+      "title": "E302",
+      "description": "Autres types d'usage - Réservations",
+      "type": "integer"
+    },
+    {
+      "name": "E303",
+      "title": "E303",
+      "description": "",
+      "type": "string"
+    },
+    {
+      "name": "catalogue_en_ligne",
+      "title": "E504",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Catalogue en ligne",
+      "type": "boolean"
+    },
+    {
+      "name": "ressources_numeriques_acquises",
+      "title": "E515",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont -",
+      "type": "boolean"
+    },
+    {
+      "name": "E517 - suppr",
+      "title": "E517 - suppr",
+      "description": "Obsolète - ne pas utiliser",
+      "type": "string",
+      "deprecated": true
+    },
+    {
+      "name": "ressources_numeriques_acquises_presse_nb_consultations",
+      "title": "E518",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont - Publications en série électroniques - Nombre de contenus consultés",
+      "type": "boolean"
+    },
+    {
+      "name": "ressources_numeriques_acquises_livres_nb_consultations",
+      "title": "E532",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont - Livres, encyclopédies, dictionnaires - Nombre de consultations",
+      "type": "boolean"
+    },
+    {
+      "name": "ressources_numeriques_acquises_musique_nb_consultations",
+      "title": "E534",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont - Musique - Nombre de consultations",
+      "type": "boolean"
+    },
+    {
+      "name": "ressources_numeriques_acquises_video_nb_consultations",
+      "title": "E536",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont - Vidéo - Nombre de consultations",
+      "type": "boolean"
+    },
+    {
+      "name": "ressources_numeriques_acquises_autoformation_nb_consultations",
+      "title": "E538",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont - Autoformation - Nombre de consultations",
+      "type": "boolean"
+    },
+    {
+      "name": "reseaux_sociaux",
+      "title": "E541",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Présence en ligne -Réseaux sociaux",
+      "type": "boolean"
+    },
+    {
+      "name": "reseaux_sociaux_liste",
+      "title": "E542",
+      "description": "Services et ressources électroniques proposés par la bibliothèque - Présence en ligne - Si oui, lesquels",
+      "type": "string"
+    },
+    {
+      "name": "nb_visites_site_internet",
+      "title": "E544",
+      "description": "Nombre de visites du site internet",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_total",
+      "title": "F101",
+      "description": "Dépenses d'investissement - Total des dépenses",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_batiments",
+      "title": "F102",
+      "description": "Dépenses d'investissement - Terrains, bâtiments",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_informatique",
+      "title": "F103",
+      "description": "Dépenses d'investissement - Informatique (matériel et logiciels)",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_vehicules",
+      "title": "F104",
+      "description": "Dépenses d'investissement - Véhicules",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_autres",
+      "title": "F105",
+      "description": "Dépenses d'investissement - Autres (mobilier, équipements)",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_investissement_documents",
+      "title": "F106",
+      "description": "Dépenses d'investissement - Documents",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_personnel_total",
+      "title": "F201",
+      "description": "Dépenses de fonctionnement - Dépenses pour le personnel - Dépense totale",
+      "type": "integer"
+    },
+    {
+      "name": "defraiement_benevoles",
+      "title": "F204",
+      "description": "Défraiement bénévoles",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_documents_total",
+      "title": "F314",
+      "description": "Dépenses de fonctionnement - Dépenses d'acquisitions documentaires - Dépense totale",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_patrimoine_reliure_conservation",
+      "title": "F401",
+      "description": "Patrimoine - Dépenses d’acquisition et d’entretien des collections patrimoniales - Reliure, conservation préventive et curative",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_patrimoine_conversion",
+      "title": "F402",
+      "description": "Patrimoine - Dépenses d’acquisition et d’entretien des collections patrimoniales - Conversion sur support matériel",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_patrimoine_numerisation",
+      "title": "F403",
+      "description": "Patrimoine - Dépenses d’acquisition et d’entretien des collections patrimoniales - Numérisation",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_action_culturelle",
+      "title": "F502",
+      "description": "Dépenses de fonctionnement - Dépenses spécifiques - Action culturelle",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_informatique",
+      "title": "F504",
+      "description": "Dépenses de fonctionnement - Dépenses spécifiques - Dépenses informatiques",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_equipement",
+      "title": "F507",
+      "description": "Dépenses de fonctionnement - Dépenses spécifiques - Équipement des documents",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_fonctionnement_communnication",
+      "title": "F508",
+      "description": "Dépenses de fonctionnement - Dépenses spécifiques - Communication",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_subventions_publiques",
+      "title": "F601",
+      "description": "Recettes - Ressources propres et subventions - Subventions d’origine publique",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_subventions_privées",
+      "title": "F602",
+      "description": "Recettes - Ressources propres et subventions - Autres ressources d'origine privée (sociétés, particuliers, …)",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_propres_total",
+      "title": "F603",
+      "description": "Recettes - Ressources propres et subventions - Recettes propres",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_propres_inscriptions",
+      "title": "F604",
+      "description": "Recettes - Ressources propres et subventions - Recettes propres - droits d'inscription",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_propres_usages",
+      "title": "F605",
+      "description": "Recettes - Ressources propres et subventions - Recettes propres - droits d'usage pour les services de la bibliothèque",
+      "type": "integer"
+    },
+    {
+      "name": "recettes_dispositifs_etat",
+      "title": "F606",
+      "description": "Subventions issues de dispositifs d'Etat",
+      "type": "string"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_livres",
+      "title": "F701",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support --Livres imprimés",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_livres",
+      "title": "F702",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Livres, livres lus, dictionnaires, encyclopédies",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_periodiques",
+      "title": "F703",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Publications en série imprimées",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_periodiques",
+      "title": "F704",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Périodiques, presse",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_sonores",
+      "title": "F705",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Documents sonores sur support",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_musique",
+      "title": "F706",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Musique",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_video",
+      "title": "F707",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Documents vidéo sur support",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_video",
+      "title": "F708",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Vidéo",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_autres",
+      "title": "F709",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Autres documents non électroniques",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_jeux_video",
+      "title": "F710",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Jeux vidéo sur support",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_support_total",
+      "title": "F712",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Documents imprimés et sur support - Total documents imprimés et sur support",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_total",
+      "title": "F713",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques -Total ressources numériques",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_total",
+      "title": "F714",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Total",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_autoformation",
+      "title": "F715",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Autoformation",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_acquisitions_documents_numeriques_autres",
+      "title": "F716",
+      "description": "Dépenses globales détaillées d'acquisition documentaire - Ressources numériques - Autres ressources",
+      "type": "integer"
+    },
+    {
+      "name": "depenses_jeux_de_societe",
+      "title": "F717",
+      "description": "Dépenses globales détaillées d'acquisition de jeux de société",
+      "type": "integer"
+    },
+    {
+      "name": "participation_financiere_ress_num_via_bd",
+      "title": "F718",
+      "description": "Participation financière pour accéder aux ressources numériques proposées par la BD",
+      "type": "integer"
+    },
+    {
+      "name": "marche_acquisitions_livres_type",
+      "title": "F801",
+      "description": "Type de marché",
+      "type": "string"
+    },
+    {
+      "name": "marche_acquisitions_livres_collectivite",
+      "title": "F802",
+      "description": "Ce marché a-t-il été passé",
+      "type": "string"
+    },
+    {
+      "name": "marche_acquisitions_livres_duree",
+      "title": "F803",
+      "description": "Durée totale du marché",
+      "type": "integer"
+    },
+    {
+      "name": "marche_acquisitions_livres_montant_total",
+      "title": "F828",
+      "description": "Montant total du marché",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_total",
+      "title": "G101",
+      "description": "Personnel - Personnes - Total",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_salaries_total",
+      "title": "G102",
+      "description": "Personnel - ETP - Total salariés ",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_conservateurs",
+      "title": "G103",
+      "description": "Personnel - Professionnels de la filière culture - Personnes - Conservateurs",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_etp_conservateurs",
+      "title": "G104",
+      "description": "Personnel - Professionnels de la filière culture - ETP - Conservateurs",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_bibliothecaires",
+      "title": "G105",
+      "description": "Personnel - Professionnels de la filière culture - Personnes - Bibliothécaires ou attachés de conservation",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_etp_bibliothecaires",
+      "title": "G106",
+      "description": "Personnel - Professionnels de la filière culture - ETP - Bibliothécaires ou attachés de conservation",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_adjoints_patrimoine",
+      "title": "G111",
+      "description": "Personnel - Professionnels de la filière culture - Personnes - Adjoints du patrimoine",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_etp_adjoints_patrimoine",
+      "title": "G112",
+      "description": "Personnel - Professionnels de la filière culture - ETP - Adjoints du patrimoine",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_adjoints_patrimoine_qualifies",
+      "title": "G113",
+      "description": "Personnel - Professionnels de la filière culture - Personnes - Adjoints du patrimoine qualifiés",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_categorie_a",
+      "title": "G114",
+      "description": "Personnel - Fonction publique autres filières - Personnes - Catégorie A",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_etp_categorie_a",
+      "title": "G115",
+      "description": "Personnel - Fonction publique autres filières - ETP - Catégorie A",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_categorie_b",
+      "title": "G117",
+      "description": "Personnel - Fonction publique autres filières - Personnes - Catégorie B",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_etp_categorie_b",
+      "title": "G118",
+      "description": "Personnel - Fonction publique autres filières - ETP - Catégorie B",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_categorie_c",
+      "title": "G120",
+      "description": "Personnel - Fonction publique autres filières - Personnes - Catégorie C",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_autres_filieres_etp_categorie_c",
+      "title": "G121",
+      "description": "Personnel - Fonction publique autres filières - ETP - Catégorie C",
+      "type": "integer"
+    },
+    {
+      "name": "benevoles_total",
+      "title": "G129",
+      "description": "Personnel - Bénévoles",
+      "type": "integer"
+    },
+    {
+      "name": "benevoles_qualifies_total",
+      "title": "G130",
+      "description": "Personnel - Bénévoles - dont qualifiés",
+      "type": "integer"
+    },
+    {
+      "name": "benevoles_etp",
+      "title": "G131",
+      "description": "Personnel - Bénévoles -« ETP »",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_total",
+      "title": "G132",
+      "description": "Personnel - ETP - Total",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_assistants_conservation",
+      "title": "G133",
+      "description": "Personnel - Professionnels de la filière culture - Personnes - Assistants territoriaux de conservation",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_etp_assistants_conservation",
+      "title": "G134",
+      "description": "Personnel - Professionnels de la filière culture - ETP- Assistants territoriaux de conservation",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_salaries_total",
+      "title": "G135",
+      "description": "Personnel - Total salariés - Personnes",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_culture_etp_adjoints_patrimoine_qualifies",
+      "title": "G136",
+      "description": "Personnel - Professionnels de la filière culture - ETP - Adjoints du patrimoine - dont qualifiés",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_salarie",
+      "title": "G143",
+      "description": "Une partie au moins du personnel est-elle salariée ?",
+      "type": "boolean"
+    },
+    {
+      "name": "benevoles",
+      "title": "G144",
+      "description": "La bibliothèque fonctionne-t-elle avec des bénévoles ?",
+      "type": "boolean"
+    },
+    {
+      "name": "personnel_postes_categorie_a",
+      "title": "G145",
+      "description": "Personnel - Nombre de postes de catégorie A/A+",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_non_titulaires_categorie_a",
+      "title": "G146",
+      "description": "Personnel - Catégorie A - non-titulaires",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_postes_categorie_a",
+      "title": "G147",
+      "description": "Personnel - Catégorie A - non-titulaires - ETP",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_postes_categorie_b",
+      "title": "G148",
+      "description": "Nombre de postes de catégorie B",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_non_titulaires_categorie_b",
+      "title": "G149",
+      "description": "Personnel - Catégorie B - non-titulaires",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_postes_categorie_b",
+      "title": "G150",
+      "description": "Personnel - Catégorie B - non-titulaires - ETP",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_postes_categorie_c",
+      "title": "G151",
+      "description": "Nombre de postes de catégorie C",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_non_titulaires_categorie_c",
+      "title": "G152",
+      "description": "Personnel - Catégorie C - non-titulaires",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_postes_categorie_c",
+      "title": "G153",
+      "description": "Personnel - Catégorie C - non-titulaires - ETP",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_etp_postes_categorie_c_qualifies",
+      "title": "G154",
+      "description": "Personnel - Catégorie C qualifiés - non-titulaires - ETP",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_vacataires",
+      "title": "G155",
+      "description": "Vacataires - Personnes",
+      "type": "integer"
+    },
+    {
+      "name": "personnel_vacataires_etp",
+      "title": "G156",
+      "description": "Vacataires - ETP",
+      "type": "integer"
+    },
+    {
+      "name": "postes_vacants_categorie_a",
+      "title": "G157",
+      "description": "Postes de catégorie A/A+ non occupés plus de 6 mois dans l'année",
+      "type": "integer"
+    },
+    {
+      "name": "postes_vacants_categorie_b",
+      "title": "G158",
+      "description": "Postes de catégorie B non occupés plus de 6 mois dans l'année",
+      "type": "integer"
+    },
+    {
+      "name": "postes_vacants_categorie_c",
+      "title": "G159",
+      "description": "Postes de catégorie C non occupés plus de 6 mois dans l'année",
+      "type": "integer"
+    },
+    {
+      "name": "formation_personnel_nb_personnes_formees",
+      "title": "G202",
+      "description": "Formation - Formation du personnel - Nombre de personnes formées",
+      "type": "integer"
+    },
+    {
+      "name": "formation_reseau_nb_personnes_formees",
+      "title": "G204",
+      "description": "Formation - Formation des acteurs du tiers réseau - Nombre de personnes formées",
+      "type": "integer"
+    },
+    {
+      "name": "formation_rofessionnelle_nb_jours",
+      "title": "G205",
+      "description": "Formation - Formation professionnelle - Nombre de jours",
+      "type": "integer"
+    },
+    {
+      "name": "formation_professionnelle_nb_participants",
+      "title": "G206",
+      "description": "Formation - Formation professionnelle - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "formations_dispensees_pesonnel_nb_jours",
+      "title": "G207",
+      "description": "Formation - Formations dispensées par le personnel - Nombre de jours",
+      "type": "integer"
+    },
+    {
+      "name": "formation_personnel_nb_jours",
+      "title": "G211",
+      "description": "Formation - Formation du personnel - Nombre de jours",
+      "type": "integer"
+    },
+    {
+      "name": "formation_reseau_nb_jours",
+      "title": "G213",
+      "description": "Formation - Formation des acteurs du tiers réseau - Nombre de jours",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_ecoles",
+      "title": "H101",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Écoles",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_ecoles_nb_actions",
+      "title": "H102",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Écoles - Nombre de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_ecoles_nb_participants",
+      "title": "H103",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Écoles - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_colleges",
+      "title": "H104",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Collèges",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_colleges_nb_actions",
+      "title": "H105",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Collèges - Nombre de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_colleges_nb_participants",
+      "title": "H106",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Collèges - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_lycees",
+      "title": "H107",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Lycées",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_lycees_nb_actions",
+      "title": "H108",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Lycées - Nombre de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_lycees_nb_participants",
+      "title": "H109",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Lycées - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_superieur",
+      "title": "H110",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Supérieur",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_superieur_nb_participants",
+      "title": "H111",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Supérieur - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_hopitaux",
+      "title": "H112",
+      "description": "Partenariat et coopération - Institutions - Hôpitaux",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_hopitaux_nb_participants",
+      "title": "H113",
+      "description": "Partenariat et coopération - Institutions - Hôpitaux - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_prisons",
+      "title": "H114",
+      "description": "Partenariat et coopération - Institutions - Prisons, Centres de semi-liberté, protection judiciaire de la jeunesse",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_prisons_nb_participants",
+      "title": "H115",
+      "description": "Partenariat et coopération - Institutions - Prisons, Centres de semi-liberté, protection judiciaire de la jeunesse - estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_maisons_retraite",
+      "title": "H116",
+      "description": "Partenariat et coopération - Institutions - Maisons de retraite",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_maisons_retraite_nb_participants",
+      "title": "H117",
+      "description": "Partenariat et coopération - Institutions - Maisons de retraite - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_centres_sociaux",
+      "title": "H118",
+      "description": "Partenariat et coopération - Institutions - Centres sociaux",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_centres_sociaux_nb_participants",
+      "title": "H119",
+      "description": "Partenariat et coopération - Institutions - Centres sociaux - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_centres_loisirs",
+      "title": "H120",
+      "description": "Partenariat et coopération - Institutions - Centres de loisirs",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_centres_loisirs_nb_participants",
+      "title": "H121",
+      "description": "Partenariat et coopération - Institutions - Centres de loisirs - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_petite_enfance",
+      "title": "H122",
+      "description": "Partenariat et coopération - Institutions - Services de la petite enfance",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_petite_enfance_nb_participants",
+      "title": "H123",
+      "description": "Partenariat et coopération - Institutions - Services de la petite enfance - estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_services_emploi",
+      "title": "H124",
+      "description": "Partenariat et coopération - Institutions - Services de l'emploi",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_services_emploi_nb_participants",
+      "title": "H125",
+      "description": "Partenariat et coopération - Institutions - Services de l'emploi - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_autres",
+      "title": "H126",
+      "description": "Partenariat et coopération - Institutions - Autres",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_autres_nb_participants",
+      "title": "H127",
+      "description": "Partenariat et coopération - Institutions - Autres - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_medicosocial",
+      "title": "H128",
+      "description": "Partenariat et coopération - Institutions - Établissements médico-sociaux",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_medicosocial_nb_participants",
+      "title": "H129",
+      "description": "Partenariat et coopération - Institutions - Établissements médico-sociaux - Estimation du nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_ecoles_nb_accueils_classes",
+      "title": "H130",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Écoles - Nombre d’accueils de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_colleges_nb_accueils_classes",
+      "title": "H131",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Collèges - Nombre d’accueils de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_lycees_nb_accueils_classes",
+      "title": "H132",
+      "description": "Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Lycées - Nombre d’accueils de classes",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_musee",
+      "title": "H202",
+      "description": "Partenariat et coopération - Équipements culturels - Musées, centres d'art, ...",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_archives",
+      "title": "H204",
+      "description": "Partenariat et coopération - Équipements culturels - Archives",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_conservatoire",
+      "title": "H206",
+      "description": "Partenariat et coopération - Équipements culturels - Conservatoire ou école de musique",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_cinema",
+      "title": "H208",
+      "description": "Partenariat et coopération - Équipements culturels - Cinéma",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_theatre",
+      "title": "H210",
+      "description": "Partenariat et coopération - Équipements culturels - Théâtre",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_spectacle_vivant",
+      "title": "H212",
+      "description": "Partenariat et coopération - Équipements culturels - Salle de spectacle ou troupe de spectacle vivant",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_librairie",
+      "title": "H214",
+      "description": "Partenariat et coopération - Équipements culturels - Librairie",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_autres",
+      "title": "H216",
+      "description": "Partenariat et coopération - Équipements culturels - Autres",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_associations_culturelles",
+      "title": "H301",
+      "description": "Partenariat et coopération - Structures associatives - Culture",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_nb_associations_culturelles",
+      "title": "H302",
+      "description": "Partenariat et coopération - Structures associatives - Culture - Nombre d'associations",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_associations_culturelles_livre_lecture",
+      "title": "H304",
+      "description": "Partenariat et coopération - Structures associatives - Culture - dont livre et lecture",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_nb_associations_culturelles_livre_lecture",
+      "title": "H305",
+      "description": "Partenariat et coopération - Structures associatives - Culture - dont livre et lecture - Nombre d'associations",
+      "type": "integer"
+    },
+    {
+      "name": "cooperation_associations_autres",
+      "title": "H307",
+      "description": "Partenariat et coopération - Structures associatives - Autres",
+      "type": "boolean"
+    },
+    {
+      "name": "cooperation_nb_associations_autres",
+      "title": "H308",
+      "description": "Partenariat et coopération - Structures associatives - Autres - Nombre d'associations",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_expositions",
+      "title": "H401",
+      "description": "Actions au sein de l'établissement - Expositions",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_expositions_tout_public",
+      "title": "H402",
+      "description": "Actions au sein de l'établissement - Expositions - Pour tout public",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_expositions_enfants",
+      "title": "H403",
+      "description": "Actions au sein de l'établissement - Expositions - Pour enfants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_conferences",
+      "title": "H409",
+      "description": "Actions au sein de l'établissement - Animations dont - Conférences, rencontres, lectures",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_conferences_tout_public",
+      "title": "H410",
+      "description": "Actions au sein de l'établissement - Animations dont - Conférences, rencontres, lectures - Pour tout public",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_conferences_enfants",
+      "title": "H411",
+      "description": "Actions au sein de l'établissement - Animations dont - Conférences, rencontres, lectures - Pour enfants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_conferences_nb_participants",
+      "title": "H412",
+      "description": "Actions au sein de l'établissement - Animations dont - Conférences, rencontres, lectures - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_contes",
+      "title": "H417",
+      "description": "Actions au sein de l'établissement - Animations dont - Séances de conte",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_contes_enfants",
+      "title": "H418",
+      "description": "Actions au sein de l'établissement - Animations dont - Séances de conte - Pour enfants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_contes_nb_participants",
+      "title": "H419",
+      "description": "Actions au sein de l'établissement - Animations dont - Séances de conte - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_fetes_salons",
+      "title": "H424",
+      "description": "Actions au sein de l'établissement - Animations dont - Fêtes, salons du livre, festivals",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_fetes_salons_tout_public",
+      "title": "H425",
+      "description": "Actions au sein de l'établissement - Animations dont - Fêtes, salons du livre, festivals - Pour tout public",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_fetes_salons_enfants",
+      "title": "H426",
+      "description": "Actions au sein de l'établissement - Animations dont - Fêtes, salons du livre, festivals - Pour enfants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_autres",
+      "title": "H428",
+      "description": "Actions au sein de l'établissement - Animations dont - Autres",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_autres_tout_public",
+      "title": "H429",
+      "description": "Actions au sein de l'établissement - Animations dont - Autres - Pour tout public",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_autres_enfants",
+      "title": "H430",
+      "description": "Actions au sein de l'établissement - Animations dont - Autres - Pour enfants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_contes_tout_public",
+      "title": "H436",
+      "description": "Actions au sein de l'établissement - Animations dont - Séances de conte - Pour tout public",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_concert",
+      "title": "H437",
+      "description": "Actions au sein de l'établissement - Concert",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_concert_tout_public",
+      "title": "H438",
+      "description": "Actions au sein de l'établissement - Pour tout public - Concert",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_concert_enfants",
+      "title": "H439",
+      "description": "Actions au sein de l'établissement - Pour enfants - Concert",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_concert_nb_participants",
+      "title": "H440",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Concert",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_projection",
+      "title": "H441",
+      "description": "Actions au sein de l'établissement - Projection",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_projection_tout_public",
+      "title": "H442",
+      "description": "Actions au sein de l'établissement - Pour tout public - Projection",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_projection_enfants",
+      "title": "H443",
+      "description": "Actions au sein de l'établissement - Pour enfants - Projection",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_projection_nb_participants",
+      "title": "H444",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Projection",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_club_lecture",
+      "title": "H445",
+      "description": "Actions au sein de l'établissement - Clubs de lecteurs",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_club_lecture_tout_public",
+      "title": "H446",
+      "description": "Actions au sein de l'établissement - Pour tout public - Clubs de lecteurs",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_club_lecture_enfants",
+      "title": "H447",
+      "description": "Actions au sein de l'établissement - Pour enfants - Clubs de lecteurs",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_club_lecture_nb_participants",
+      "title": "H448",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Clubs de lecteurs",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_ecriture",
+      "title": "H449",
+      "description": "Actions au sein de l'établissement - Ateliers d'écriture",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_ateliers_ecriture_pour_tous_pu",
+      "title": "H450",
+      "description": "Actions au sein de l'établissement - Pour tout public - Ateliers d'écriture",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_ecriture_pour_enfants",
+      "title": "H451",
+      "description": "Actions au sein de l'établissement - Pour enfants - Ateliers d'écriture",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_ecriture_nb_participants",
+      "title": "H452",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Ateliers d'écriture",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_video_sur_place",
+      "title": "H453",
+      "description": "Actions au sein de l'établissement - Jeux vidéo sur place",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_jeux_video_sur_place_tout_public",
+      "title": "H454",
+      "description": "Actions au sein de l'établissement - Pour tout public - Jeux vidéo sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_video_sur_place_enfants",
+      "title": "H455",
+      "description": "Actions au sein de l'établissement - Pour enfants - Jeux vidéo sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_video_sur_place_nb_participants",
+      "title": "H456",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Jeux vidéo sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_de_societe_sur_place",
+      "title": "H457",
+      "description": "Actions au sein de l'établissement - Jeux de société sur place",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_jeux_de_societe_sur_place_tout_public",
+      "title": "H458",
+      "description": "Actions au sein de l'établissement - Pour tout public - Jeux de société sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_de_societe_sur_place_enfants",
+      "title": "H459",
+      "description": "Actions au sein de l'établissement - Pour enfants - Jeux de société sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_jeux_de_societe_sur_place_nb_participants",
+      "title": "H460",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Jeux de société sur place",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers",
+      "title": "H461",
+      "description": "Actions au sein de l'établissement - Ateliers",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_ateliers_tout_public",
+      "title": "H462",
+      "description": "Actions au sein de l'établissement - Pour tout public - Ateliers",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_enfants",
+      "title": "H463",
+      "description": "Actions au sein de l'établissement - Pour enfants - Ateliers",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_nb_participants",
+      "title": "H464",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Ateliers",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_mediation_numerique",
+      "title": "H465",
+      "description": "Actions au sein de l'établissement - Médiation numérique",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_mediation_numerique_tout_public",
+      "title": "H466",
+      "description": "Actions au sein de l'établissement - Pour tout public - Médiation numérique",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_mediation_numerique_enfants",
+      "title": "H467",
+      "description": "Actions au sein de l'établissement - Pour enfants - Médiation numérique",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_mediation_numerique_nb_participants",
+      "title": "H468",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Médiation numérique",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_escape_game",
+      "title": "H469",
+      "description": "Actions au sein de l'établissement - Escape Game",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_escape_game_tout_public",
+      "title": "H470",
+      "description": "Actions au sein de l'établissement - Pour tout public - Escape Game",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_escape_game_enfants",
+      "title": "H471",
+      "description": "Actions au sein de l'établissement - Pour enfants - Escape Game",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_escape_game_nb_participants",
+      "title": "H472",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Escape Game",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_formation_vie",
+      "title": "H473",
+      "description": "Actions au sein de l'établissement - Formation tout au long de la vie",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_formation_vie_tout_public",
+      "title": "H474",
+      "description": "Actions au sein de l'établissement - Pour tout public - Formation tout au long de la vie",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_formation_vie_enfants",
+      "title": "H475",
+      "description": "Actions au sein de l'établissement - Pour enfants - Formation tout au long de la vie",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_formation_vie_nb_participants",
+      "title": "H476",
+      "description": "Actions au sein de l'établissement - Nombre de participants - Formation tout au long de la vie",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_propositions_en_libre_acces",
+      "title": "H477",
+      "description": "Actions au sein de l'établissement - Propositions en libre accès",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_propositions_en_libre_acces_tout_public",
+      "title": "H478",
+      "description": "Actions au sein de l'établissement - Pour tout public - Propositions en libre accès",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_propositions_en_libre_acces_enfants",
+      "title": "H479",
+      "description": "Actions au sein de l'établissement - Pour enfants - Propositions en libre accès",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_emi",
+      "title": "H480",
+      "description": "Actions au sein de l'établissement - Education aux médias et à l'information (EMI)",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_emi_tout_public",
+      "title": "H481",
+      "description": "Actions au sein de l'établissement - Pour tout public - EMI",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_emi_enfants",
+      "title": "H482",
+      "description": "Actions au sein de l'établissement - Pour enfants - EMI",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_emi_nb_participants",
+      "title": "H483",
+      "description": "Actions au sein de l'établissement - Nombre de participants - EMI",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_participatifs",
+      "title": "H484",
+      "description": "Actions au sein de l'établissement - Ateliers participatifs",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_in_situ_ateliers_participatifs_tout_public",
+      "title": "H485",
+      "description": "Actions au sein de l'établissement - Pour tout public - Ateliers participatifs",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_ateliers_participatifs_enfants",
+      "title": "H486",
+      "description": "Actions au sein de l'établissement - Pour enfants - Ateliers participatifs",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_spectacles",
+      "title": "H487",
+      "description": "Actions au sein de l'établissement - Animations dont - Spectacles",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_spectacles_tout_public",
+      "title": "H488",
+      "description": "Actions au sein de l'établissement - Animations dont - Pour tout public - Spectacles",
+      "type": "integer"
+    },
+    {
+      "name": "actions_in_situ_spectacles_enfants",
+      "title": "H489",
+      "description": "Actions au sein de l'établissement - Animations dont - Pour enfants - Spectacles",
+      "type": "integer"
+    },
+    {
+      "name": "actions_hors_les_murs",
+      "title": "H501",
+      "description": "Actions hors de l'établissement - Actions hors les murs",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_hors_les_murs_nb_actions",
+      "title": "H502",
+      "description": "Actions hors de l'établissement - Actions hors les murs - Nombre d'actions",
+      "type": "integer"
+    },
+    {
+      "name": "actions_hors_les_murs_portage",
+      "title": "H504",
+      "description": "Actions hors de l'établissement - Portage à domicile",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_hors_les_murs_portage_nb_actions",
+      "title": "H505",
+      "description": "Actions hors de l'établissement - Portage à domicile - Nombre d’actions",
+      "type": "integer"
+    },
+    {
+      "name": "actions_hors_les_murs_portage_nb_participants",
+      "title": "H506",
+      "description": "Actions hors de l'établissement - Portage à domicile - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_cooperation_locale",
+      "title": "H601",
+      "description": "Actions de coopération - Coopération locale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_nationale",
+      "title": "H604",
+      "description": "Actions de coopération - Coopération nationale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_intenationale",
+      "title": "H607",
+      "description": "Actions de coopération - Coopération internationale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_catalogue",
+      "title": "H611",
+      "description": "Actions de coopération - Coopération locale - Catalogue commun",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_portail",
+      "title": "H612",
+      "description": "Actions de coopération - Coopération locale - Portail documentaire commun",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_poldoc",
+      "title": "H613",
+      "description": "Actions de coopération - Coopération locale - Politique documentaire commune",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_navette",
+      "title": "H614",
+      "description": "Actions de coopération - Coopération locale - Navette documentaire",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_carte_unique",
+      "title": "H615",
+      "description": "Actions de coopération - Coopération locale - Carte unique de lecteur",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_autre",
+      "title": "H616",
+      "description": "Actions de coopération - Coopération locale - Autre action de coopération intercommunale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_locale_action_culturelle",
+      "title": "H617",
+      "description": "Actions de coopération - Coopération locale - Action culturelle commune",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_intercommunale",
+      "title": "H618",
+      "description": "Actions de coopération - Coopération intercommunale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_hors_epci",
+      "title": "H619",
+      "description": "Actions de coopération - Coopération avec d'autres bibliothèques hors EPCI",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_cooperation_bd_hors_convention",
+      "title": "H620",
+      "description": "Actions de coopération - Coopération avec la bibliothèque départementale hors convention",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_handicap",
+      "title": "H704",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation de handicap",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_handicap_nb_participants",
+      "title": "H706",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation de handicap - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_emploi",
+      "title": "H713",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en recherche d'emploi",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_emploi_nb_actions",
+      "title": "H714",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en recherche d'emploi - Nombre d'actions",
+      "type": "integer"
+    },
+    {
+      "name": "actions_emploi_nb_participants",
+      "title": "H715",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en recherche d'emploi - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_illettrisme",
+      "title": "H716",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation illettrisme",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_illettrisme_nb_actions",
+      "title": "H717",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation illettrisme - Nombre d'actions",
+      "type": "integer"
+    },
+    {
+      "name": "actions_illettrisme_nb_participants",
+      "title": "H718",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation illettrisme - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_non_francophones",
+      "title": "H719",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Populations non francophones",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_non_francophones_nb_participants",
+      "title": "H721",
+      "description": "Actions et services à destination de publics à besoins spécifiques -Populations non francophones - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_insertion",
+      "title": "H725",
+      "description": "Actions et services à destination de publics à besoins spécifiques -Population en situation d’insertion sociale",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_insertion_nb_actions",
+      "title": "H726",
+      "description": "Actions et services à destination de publics à besoins spécifiques -Population en situation d’insertion sociale - Nombre d'actions",
+      "type": "integer"
+    },
+    {
+      "name": "actions_insertion_pop",
+      "title": "H727",
+      "description": "Actions et services à destination de publics à besoins spécifiques -Population en situation d’insertion sociale - Nombre de participants",
+      "type": "integer"
+    },
+    {
+      "name": "actions_handicap_nb_actions_tout_public",
+      "title": "H729",
+      "description": "Nombre d'actions - Pour tout public - Personnes en situation de handicap",
+      "type": "integer"
+    },
+    {
+      "name": "actions_handicap_nb_actions_enfants",
+      "title": "H730",
+      "description": "Nombre d'actions - Pour enfants - Personnes en situation de handicap",
+      "type": "integer"
+    },
+    {
+      "name": "actions_illectronisme",
+      "title": "H731",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes en situation d'illectronisme",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_illectronisme_nb_actions",
+      "title": "H732",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Nombre d'actions - Personnes en situation d'illectronisme",
+      "type": "integer"
+    },
+    {
+      "name": "actions_illectronisme_nb_participants",
+      "title": "H733",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Nombre de participants - Personnes en situation d'illectronisme",
+      "type": "integer"
+    },
+    {
+      "name": "actions_non_francophones_nb_actions_tout_public",
+      "title": "H734",
+      "description": "Nombre d'actions - Pour tout public - Populations non francophones",
+      "type": "integer"
+    },
+    {
+      "name": "actions_non_francophones_nb_actions_enfants",
+      "title": "H735",
+      "description": "Nombre d'actions - Pour enfants - Populations non francophones",
+      "type": "integer"
+    },
+    {
+      "name": "actions_public_justice",
+      "title": "H736",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Publics sous main de justice",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_public_justice_nb_actions",
+      "title": "H737",
+      "description": "Nombre d'actions - Pour tout public - Publics sous main de justice",
+      "type": "integer"
+    },
+    {
+      "name": "actions_public_justice_nb_actions_enfants",
+      "title": "H738",
+      "description": "Nombre d'actions - Pour enfants - Publics sous main de justice",
+      "type": "integer"
+    },
+    {
+      "name": "actions_public_justice_nb_participants",
+      "title": "H739",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Nombre de participants - Publics sous main de justice",
+      "type": "integer"
+    },
+    {
+      "name": "actions_pers_hospitalisees",
+      "title": "H740",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Personnes hospitalisées",
+      "type": "boolean"
+    },
+    {
+      "name": "actions_pers_hospitalisees_nb_actions",
+      "title": "H741",
+      "description": "Nombre d'actions - Pour tout public - Personnes hospitalisées",
+      "type": "integer"
+    },
+    {
+      "name": "actions_pers_hospitalisees_nb_actions_enfants",
+      "title": "H742",
+      "description": "Nombre d'actions - Pour enfants - Personnes hospitalisées",
+      "type": "integer"
+    },
+    {
+      "name": "actions_pers_hospitalisees_nb_participants",
+      "title": "H743",
+      "description": "Actions et services à destination de publics à besoins spécifiques - Nombre de participants - Personnes hospitalisées",
+      "type": "integer"
+    },
+    {
+      "name": "salle_travail_groupe",
+      "title": "H801",
+      "description": "Services physiques de la bibliothèque - Salle(s) de travail en groupe",
+      "type": "boolean"
+    },
+    {
+      "name": "auditorium",
+      "title": "H802",
+      "description": "Services physiques de la bibliothèque - Auditorium",
+      "type": "boolean"
+    },
+    {
+      "name": "salle_spectacle",
+      "title": "H803",
+      "description": "Services physiques de la bibliothèque - Salle de spectacle",
+      "type": "boolean"
+    },
+    {
+      "name": "fablab",
+      "title": "H804",
+      "description": "Services physiques de la bibliothèque - Fablab",
+      "type": "boolean"
+    },
+    {
+      "name": "cafetaria",
+      "title": "H805",
+      "description": "Services physiques de la bibliothèque - Cafétéria",
+      "type": "boolean"
+    },
+    {
+      "name": "grainotheque",
+      "title": "H806",
+      "description": "Services physiques de la bibliothèque - Grainothèque",
+      "type": "boolean"
+    },
+    {
+      "name": "artotheque",
+      "title": "H807",
+      "description": "Services physiques de la bibliothèque - Artothèque",
+      "type": "boolean"
+    },
+    {
+      "name": "boite_de_retour",
+      "title": "H808",
+      "description": "Services physiques de la bibliothèque - Boite de retour",
+      "type": "boolean"
+    },
+    {
+      "name": "ludotheque",
+      "title": "H809",
+      "description": "Services physiques de la bibliothèque - Ludothèque",
+      "type": "boolean"
+    },
+    {
+      "name": "studio",
+      "title": "H810",
+      "description": "Services physiques de la bibliothèque – Studio de répétition ou d’enregistrement",
+      "type": "boolean"
+    },
+    {
+      "name": "commentaires",
+      "title": "I101",
+      "description": "Commentaires",
+      "type": "string"
+    },
+    {
+      "name": "gratuite_services",
+      "title": "J201",
+      "description": "Inscription et tarifs - L'inscription et le prêt sont-ils gratuits pour tous les usagers ?",
+      "type": "boolean"
+    },
+    {
+      "name": "local_specifique",
+      "title": "J601",
+      "description": "Usage des locaux - Disposez-vous d'un local spécifique pour la bibliothèque ?",
+      "type": "boolean"
+    },
+    {
+      "name": "montant_acquisitions_pat",
+      "title": "K101",
+      "description": "Patrimoine - Dépenses d’acquisition et d’entretien des collections patrimoniales - Acquisition",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_livres_imprimes",
+      "title": "K201",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_livres_imprimes_fonds",
+      "title": "K202",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_livres_imprimes_acquisitions",
+      "title": "K203",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_livres_imprimes_depot_legal",
+      "title": "K206",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - dont entrés par dépôt légal - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_livres_imprimes_livres_artistes_fonds",
+      "title": "K209",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - dont livres d’artistes - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_livres_imprimes_livres_artistes_acquisitions",
+      "title": "K210",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés - dont livres d’artistes - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_periodiques",
+      "title": "K211",
+      "description": "Patrimoine - fonds et acquisitions - publications en série - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_periodiques_fonds",
+      "title": "K212",
+      "description": "Patrimoine - fonds et acquisitions - publications en série - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_periodiques_acquisitions",
+      "title": "K213",
+      "description": "Patrimoine - fonds et acquisitions - publications en série - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_manuscrits",
+      "title": "K214",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_archives",
+      "title": "K215",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_archives_fonds_ml",
+      "title": "K216",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives - fonds (ML)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_archives_acquisitions_ml",
+      "title": "K217",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives - acquisitions (ML)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_cartes",
+      "title": "K218",
+      "description": "Patrimoine - fonds et acquisitions - cartes - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_cartes_fonds",
+      "title": "K219",
+      "description": "Patrimoine - fonds et acquisitions - cartes - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_cartes_acquisitions",
+      "title": "K220",
+      "description": "Patrimoine - fonds et acquisitions - cartes - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_musique",
+      "title": "K221",
+      "description": "Patrimoine - fonds et acquisitions - musique imprimée - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_musique_fonds",
+      "title": "K222",
+      "description": "Patrimoine - fonds et acquisitions - musique imprimée - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_musique_acquisitions",
+      "title": "K223",
+      "description": "Patrimoine - fonds et acquisitions - musique imprimée - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_documents_graphiques",
+      "title": "K224",
+      "description": "Patrimoine - fonds et acquisitions - documents graphiques - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_documents_graphiques_fonds",
+      "title": "K225",
+      "description": "Patrimoine - fonds et acquisitions - documents graphiques - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_documents_graphiques_acquisitions",
+      "title": "K226",
+      "description": "Patrimoine - fonds et acquisitions - documents graphiques - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_objets",
+      "title": "K227",
+      "description": "Patrimoine - fonds et acquisitions - objets - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_objets_fonds",
+      "title": "K228",
+      "description": "Patrimoine - fonds et acquisitions - objets - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_objets_acquisitions",
+      "title": "K229",
+      "description": "Patrimoine - fonds et acquisitions - objets - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_documents_sonores",
+      "title": "K230",
+      "description": "Patrimoine - fonds et acquisitions - documents sonores sur support - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_documents_sonores_fonds",
+      "title": "K231",
+      "description": "Patrimoine - fonds et acquisitions - documents sonores sur support - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_documents_sonores_acquisitions",
+      "title": "K232",
+      "description": "Patrimoine - fonds et acquisitions - documents sonores sur support - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_images_animees",
+      "title": "K233",
+      "description": "Patrimoine - fonds et acquisitions - images animées sur support - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_images_animees_fonds",
+      "title": "K234",
+      "description": "Patrimoine - fonds et acquisitions - images animées sur support - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_images_animees_acquisitions",
+      "title": "K235",
+      "description": "Patrimoine - fonds et acquisitions - images animées sur support - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_archives_fonds",
+      "title": "K239",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives - fonds (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_archives_acquisitions",
+      "title": "K240",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives - acquisitions (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_dons",
+      "title": "K241",
+      "description": "Entrées par dons, legs et dations - boolean",
+      "type": "boolean"
+    },
+    {
+      "name": "patrimoine_dons_fonds",
+      "title": "K242",
+      "description": "Entrées par dons, legs et dations - nombre de documents (UM)",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_livres_imprimes_notices",
+      "title": "K303",
+      "description": "Patrimoine - Signalement et description - livres imprimés - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_livres_imprimes_notices_depot_legal",
+      "title": "K309",
+      "description": "Patrimoine - Signalement et description - livres imprimés - dont entrés par dépôt légal - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_livres_imprimes_artistes_notices",
+      "title": "K312",
+      "description": "Patrimoine - Signalement et description - livres imprimés - dont livres d’artistes - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_periodiques_notices",
+      "title": "K315",
+      "description": "Patrimoine - Signalement et description - publications en série - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_manuscrits_notices",
+      "title": "K318",
+      "description": "Patrimoine - Signalement et description - manuscrits - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_archives_notices",
+      "title": "K321",
+      "description": "Patrimoine - Signalement et description - documents d’archives - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_cartes_notices",
+      "title": "K324",
+      "description": "Patrimoine - Signalement et description - cartes- notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_musique_imprimee_notices",
+      "title": "K327",
+      "description": "Patrimoine - Signalement et description - musique imprimée - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_documents_graphiques_notices",
+      "title": "K330",
+      "description": "Patrimoine - Signalement et description - documents graphiques - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_objets_notices",
+      "title": "K333",
+      "description": "Patrimoine - Signalement et description - objets - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_documents_sonores_notices",
+      "title": "K336",
+      "description": "Patrimoine - Signalement et description - documents sonores sur support - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_signalement_images_animees_notices",
+      "title": "K339",
+      "description": "Patrimoine - Signalement et description - images animées - notices informatisées",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_livres_imprimes_total_vues",
+      "title": "K402",
+      "description": "Patrimoine - Numérisation - livres imprimés - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_livres_imprimes_total_documents",
+      "title": "K403",
+      "description": "Patrimoine - Numérisation - livres imprimés - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_livres_imprimes_annee_vues",
+      "title": "K404",
+      "description": "Patrimoine - Numérisation - livres imprimés - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_livres_imprimes_annee_documents",
+      "title": "K405",
+      "description": "Patrimoine - Numérisation - livres imprimés - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_periodiques_total_vues",
+      "title": "K407",
+      "description": "Patrimoine - Numérisation - publications en série - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_periodiques_total_documents",
+      "title": "K408",
+      "description": "Patrimoine - Numérisation - publications en série - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_periodiques_annee_vues",
+      "title": "K409",
+      "description": "Patrimoine - Numérisation - publications en série - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_periodiques_annee_documents",
+      "title": "K410",
+      "description": "Patrimoine - Numérisation - publications en série - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_manuscrits_total_vues",
+      "title": "K412",
+      "description": "Patrimoine - Numérisation - manuscrits - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_manuscrits_total_documents",
+      "title": "K413",
+      "description": "Patrimoine - Numérisation - manuscrits - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_manuscrits_annee_vues",
+      "title": "K414",
+      "description": "Patrimoine - Numérisation - manuscrits - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_manuscrits_annee_documents",
+      "title": "K415",
+      "description": "Patrimoine - Numérisation - manuscrits - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_archives_total_vues",
+      "title": "K417",
+      "description": "Patrimoine - Numérisation - documents d’archives - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_archives_total_documents",
+      "title": "K418",
+      "description": "Patrimoine - Numérisation - documents d’archives - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_archives_annee_vues",
+      "title": "K419",
+      "description": "Patrimoine - Numérisation - documents d’archives - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_archives_annee_documents",
+      "title": "K420",
+      "description": "Patrimoine - Numérisation - documents d’archives - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_cartes_total_vues",
+      "title": "K422",
+      "description": "Patrimoine - Numérisation - cartes - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_cartes_total_documents",
+      "title": "K423",
+      "description": "Patrimoine - Numérisation - cartes - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_cartes_annee_vues",
+      "title": "K424",
+      "description": "Patrimoine - Numérisation - cartes - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_cartes_annee_documents",
+      "title": "K425",
+      "description": "Patrimoine - Numérisation - cartes - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_musique_imprimee_total_vues",
+      "title": "K427",
+      "description": "Patrimoine - Numérisation - musique imprimée - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_musique_imprimee_total_documents",
+      "title": "K428",
+      "description": "Patrimoine - Numérisation - musique imprimée - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_musique_imprimee_annee_vues",
+      "title": "K429",
+      "description": "Patrimoine - Numérisation - musique imprimée - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_musique_imprimee_annee_documents",
+      "title": "K430",
+      "description": "Patrimoine - Numérisation - musique imprimée - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_graphiques_total_vues",
+      "title": "K432",
+      "description": "Patrimoine - Numérisation - documents graphiques - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_graphiques_total_documents",
+      "title": "K433",
+      "description": "Patrimoine - Numérisation - documents graphiques - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_graphiques_annee_vues",
+      "title": "K434",
+      "description": "Patrimoine - Numérisation - documents graphiques - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_graphiques_annee_documents",
+      "title": "K435",
+      "description": "Patrimoine - Numérisation - documents graphiques - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_objets_total_vues",
+      "title": "K437",
+      "description": "Patrimoine - Numérisation - objets - total documents numérisés - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_objets_total_documents",
+      "title": "K438",
+      "description": "Patrimoine - Numérisation - objets - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_objets_annee_vues",
+      "title": "K439",
+      "description": "Patrimoine - Numérisation - objets - documents numérisés dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_objets_annee_documents",
+      "title": "K440",
+      "description": "Patrimoine - Numérisation - objets - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_sonores_total",
+      "title": "K442",
+      "description": "Patrimoine - Numérisation - documents sonores - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_documents_sonores_annee",
+      "title": "K443",
+      "description": "Patrimoine - Numérisation - documents sonores - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_images_animees_total",
+      "title": "K445",
+      "description": "Patrimoine - Numérisation - images animées - total documents numérisés - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_numerisation_images_animees_annee",
+      "title": "K446",
+      "description": "Patrimoine - Numérisation - images animées - documents numérisés dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_livres_imprimes_total_vues",
+      "title": "K502",
+      "description": "Patrimoine - Mise en ligne - livres imprimés - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_livres_imprimes_total_documents",
+      "title": "K503",
+      "description": "Patrimoine - Mise en ligne - livres imprimés - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_livres_imprimes_annee_vues",
+      "title": "K504",
+      "description": "Patrimoine - Mise en ligne - livres imprimés - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_livres_imprimes_annee_documents",
+      "title": "K505",
+      "description": "Patrimoine - Mise en ligne - livres imprimés - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_periodiques_total_vues",
+      "title": "K507",
+      "description": "Patrimoine - Mise en ligne - publications en série - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_periodiques_total_documents",
+      "title": "K508",
+      "description": "Patrimoine - Mise en ligne - publications en série - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_periodiques_annee_vues",
+      "title": "K509",
+      "description": "Patrimoine - Mise en ligne - publications en série - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_periodiques_annee_documents",
+      "title": "K510",
+      "description": "Patrimoine - Mise en ligne - publications en série - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_manuscrits_total_vues",
+      "title": "K512",
+      "description": "Patrimoine - Mise en ligne - manuscrits - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_manuscrits_total_documents",
+      "title": "K513",
+      "description": "Patrimoine - Mise en ligne - manuscrits - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_manuscrits_annee_vues",
+      "title": "K514",
+      "description": "Patrimoine - Mise en ligne - manuscrits - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_manuscrits_annee_documents",
+      "title": "K515",
+      "description": "Patrimoine - Mise en ligne - manuscrits - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_archives_total_vues",
+      "title": "K517",
+      "description": "Patrimoine - Mise en ligne - documents d’archives - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_archives_total_documents",
+      "title": "K518",
+      "description": "Patrimoine - Mise en ligne - documents d’archives - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_archives_annee_vues",
+      "title": "K519",
+      "description": "Patrimoine - Mise en ligne - documents d’archives - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_archives_annee_documents",
+      "title": "K520",
+      "description": "Patrimoine - Mise en ligne - documents d’archives - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_cartes_total_vues",
+      "title": "K522",
+      "description": "Patrimoine - Mise en ligne - cartes - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_cartes_total_documents",
+      "title": "K523",
+      "description": "Patrimoine - Mise en ligne - cartes - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_cartes_annee_vues",
+      "title": "K524",
+      "description": "Patrimoine - Mise en ligne - cartes - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_cartes_annee_documents",
+      "title": "K525",
+      "description": "Patrimoine - Mise en ligne - cartes - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_musique_imprimee_total_vues",
+      "title": "K527",
+      "description": "Patrimoine - Mise en ligne - musique imprimée - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_musique_imprimee_total_documents",
+      "title": "K528",
+      "description": "Patrimoine - Mise en ligne - musique imprimée - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_musique_imprimee_annee_vues",
+      "title": "K529",
+      "description": "Patrimoine - Mise en ligne - musique imprimée - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_musique_imprimee_annee_documents",
+      "title": "K530",
+      "description": "Patrimoine - Mise en ligne - musique imprimée - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_graphiques_total_vues",
+      "title": "K532",
+      "description": "Patrimoine - Mise en ligne - documents graphiques - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_graphiques_total_documents",
+      "title": "K533",
+      "description": "Patrimoine - Mise en ligne - documents graphiques - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_graphiques_annee_vues",
+      "title": "K534",
+      "description": "Patrimoine - Mise en ligne - documents graphiques - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_graphiques_annee_documents",
+      "title": "K535",
+      "description": "Patrimoine - Mise en ligne - documents graphiques - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_objets_total_vues",
+      "title": "K537",
+      "description": "Patrimoine - Mise en ligne - objets - total documents mis en ligne - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_objets_total_documents",
+      "title": "K538",
+      "description": "Patrimoine - Mise en ligne - objets - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_objets_annee_vues",
+      "title": "K539",
+      "description": "Patrimoine - Mise en ligne - objets - documents mis en ligne dans l’année - vues",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_objets_annee_documents",
+      "title": "K540",
+      "description": "Patrimoine - Mise en ligne - objets - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_sonores_total",
+      "title": "K542",
+      "description": "Patrimoine - Mise en ligne - documents sonores - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_documents_sonores_annee",
+      "title": "K543",
+      "description": "Patrimoine - Mise en ligne - documents sonores - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_images_animees_total",
+      "title": "K545",
+      "description": "Patrimoine - Mise en ligne - images animées - total documents mis en ligne - documents",
+      "type": "integer"
+    },
+    {
+      "name": "patrimoine_mise_en_ligne_images_animees_annee",
+      "title": "K546",
+      "description": "Patrimoine - Mise en ligne - images animées - documents mis en ligne dans l’année - documents",
+      "type": "integer"
+    },
+    {
+      "name": "code_insee",
+      "title": "insee",
+      "description": "Code insee de la commune",
+      "type": "string"
+    },
+    {
+      "name": "departement",
+      "title": "Département",
+      "description": "Département de la commune",
+      "type": "string"
+    },
+    {
+      "name": "region",
+      "title": "Région",
+      "description": "Région de la commune",
+      "type": "string"
+    },
+    {
+      "name": "code_epci",
+      "title": "Code EPCI",
+      "description": "Code de l’EPCI",
+      "type": "string"
+    },
+    {
+      "name": "epci",
+      "title": "Libellé EPCI",
+      "description": "Libellé de l’EPCI",
+      "type": "string"
+    },
+    {
+      "name": "date_modification",
+      "title": "Date dernière modification",
+      "description": "Date de dernière modification des données",
+      "type": "date",
+      "format": "default"
+    },
+    {
+      "name": "taux_completude",
+      "title": "Taux de complétude",
+      "description": "Taux de complétude",
+      "type": "integer"
+    },
+    {
+      "name": "annee_donnees",
+      "title": "Année des données",
+      "description": "Année des données collectées",
+      "type": "date",
+      "format": "default"
+    },
+    {
+      "name": "nom_uc",
+      "title": "nom_uc",
+      "description": "Code de l’unité ou des unités de coopération",
+      "type": "string"
+    },
+    {
+      "name": "referent",
+      "title": "referent",
+      "description": "Référent de l’enquête annuelle",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Administrateur partenaire",
+          "OLP"
+        ]
+      }
+    }
+  ],
+  "primaryKey": [
+    "code_bib"
+  ]
+}
