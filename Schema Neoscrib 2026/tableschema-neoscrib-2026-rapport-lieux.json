@@ -134,13 +134,6 @@
       "type": "integer"
     },
     {
-      "name": "fax",
-      "title": "A113",
-      "description": "Fax - Obsolète - ne pas utiliser",
-      "type": "string",
-      "deprecated": true
-    },
-    {
       "name": "courriel",
       "title": "A114",
       "description": "Adresse de courriel générique de l'établissement",
@@ -211,6 +204,18 @@
       "title": "A133",
       "description": "Statut et grade de la personne responsable de la bibliothèque",
       "type": "string"
+    },
+	{
+      "name": "population_collectivite",
+      "title": "A200",
+      "description": "Population de la collectivité de rattachement (commune ou groupement de communes)",
+      "type": "integer"
+    },
+    {
+      "name": "population_etablissement",
+      "title": "A203",
+      "description": "Population effective desservie par l’établissement",
+      "type": "integer"
     },
     {
       "name": "amplitude_horaire",
@@ -1242,20 +1247,6 @@
       "type": "integer"
     },
     {
-      "name": "ne_pas_utiliser",
-      "title": "E145",
-      "description": "Obsolète - ne pas utiliser",
-      "type": "string",
-      "deprecated": true
-    },
-    {
-      "name": "ne_pas_utiliser",
-      "title": "E146",
-      "description": "Obsolète - ne pas utiliser",
-      "type": "string",
-      "deprecated": true
-    },
-    {
       "name": "frequentation_annuelle",
       "title": "E147",
       "description": "Usagers - Fréquentation : entrées dans l'établissement durant l’année",
@@ -1526,13 +1517,6 @@
       "type": "integer"
     },
     {
-      "name": "ne_pas_utiliser",
-      "title": "E303",
-      "description": "Obsolète - ne pas utiliser",
-      "type": "string",
-      "deprecated": true
-    },
-    {
       "name": "catalogue_en_ligne",
       "title": "E504",
       "description": "Services et ressources électroniques proposés par la bibliothèque - Catalogue en ligne",
@@ -1543,13 +1527,6 @@
       "title": "E515",
       "description": "Services et ressources électroniques proposés par la bibliothèque - Ressources numériques dont -",
       "type": "boolean"
-    },
-    {
-      "name": "ne_pas_utiliser",
-      "title": "E517",
-      "description": "Obsolète - ne pas utiliser",
-      "type": "string",
-      "deprecated": true
     },
     {
       "name": "ressources_numeriques_acquises_presse_nb_consultations",
