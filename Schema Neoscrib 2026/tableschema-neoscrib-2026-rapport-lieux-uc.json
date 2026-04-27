@@ -212,7 +212,7 @@
       "type": "integer"
     },
     {
-      "name": "population_etablissement",
+      "name": "population_desservie",
       "title": "A203",
       "description": "Population effective desservie par l’établissement",
       "type": "integer"
@@ -779,7 +779,7 @@
       "type": "boolean"
     },
     {
-      "name": "ress_num_acq_livres_fournisseurs",
+      "name": "ress_num_acq_livres_audio_fournisseurs",
       "title": "D524",
       "description": "Ressources numériques acquises - bouquets - livres enregistrés - nom des offres",
       "type": "string"
@@ -1481,7 +1481,7 @@
       "type": "integer"
     },
     {
-      "name": "prets_documents_sonores_bd_total",
+      "name": "prets_documents_sonores_musique_bd_total",
       "title": "E245",
       "description": "Prêts - Documents sonores : musique - Total - Dont prêts sur documents de la BD",
       "type": "integer"
@@ -2267,7 +2267,7 @@
       "type": "integer"
     },
     {
-      "name": "cooperation_autres",
+      "name": "cooperation_autres_institutions",
       "title": "H126",
       "description": "Partenariat et coopération - Institutions - Autres",
       "type": "boolean"
@@ -2318,7 +2318,7 @@
       "name": "cooperation_archives",
       "title": "H204",
       "description": "Partenariat et coopération - Équipements culturels - Archives",
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "name": "cooperation_conservatoire",
@@ -2330,7 +2330,7 @@
       "name": "cooperation_cinema",
       "title": "H208",
       "description": "Partenariat et coopération - Équipements culturels - Cinéma",
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "name": "cooperation_theatre",
@@ -2342,7 +2342,7 @@
       "name": "cooperation_spectacle_vivant",
       "title": "H212",
       "description": "Partenariat et coopération - Équipements culturels - Salle de spectacle ou troupe de spectacle vivant",
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "name": "cooperation_librairie",
@@ -2351,10 +2351,10 @@
       "type": "boolean"
     },
     {
-      "name": "cooperation_autres",
+      "name": "cooperation_autres_equipements_culturels",
       "title": "H216",
       "description": "Partenariat et coopération - Équipements culturels - Autres",
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "name": "cooperation_associations_culturelles",

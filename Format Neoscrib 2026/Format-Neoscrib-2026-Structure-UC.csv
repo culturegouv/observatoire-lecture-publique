@@ -1,40 +1,40 @@
-"code";"libellé";"description";"type";"format";"minimum";"maximum";"enum";"granularity";"constraint";"reference"
-"GenUID";"gen_uid";"Identifiant interne Neoscrib de l’unité de coopération";"string";"default";;;;"annuel";;
-"code_uc";"code_uc";"Code de l’unité de coopération";"string";"default";;;;"annuel";"unique";"Neoscrib"
-"nom_uc";"nom_uc";"Nom de l’unité de coopération";"string";"default";;;;"annuel";"unique";"Neoscrib"
-"type";"type";"Type de coopération ";"string";"default";;;"1a, 1a - 2a, 1a - 2b, 1b, 1b - 2a, 1b - 2b, 2a, 2b, 3a, 3b, 3b - 1a, 3b - 1a - 2a, 3b - 1b, 3b - 1b - 2a, 3b - 1b - 2b, 3b - 2a";"annuel";;
-"coop_informatique";"coop_informatique";"Coopération informatique oui/non";"boolean";"default";;;;"annuel";;
-"coop_sigb";"coop_sigb";"SIGB mutualisé oui/non";"boolean";"default";;;;"annuel";;
-"coop_coordination";"coop_coordination";"Coordination de l’action culturelle oui/non";"boolean";"default";;;;"annuel";;
-"coop_acquisition";"coop_acquisition";"Acquisitions mutualisées oui/non";"boolean";"default";;;;"annuel";;
-"unite_administrative";"unite_administrative";"Type d’unité administrative de rattachement";"string";"default";;;"Municipale, Intercommunale";"annuel";;
-"region";"region";"Nom de la région";"string";"default";;;;"annuel";"unique";"INSEE"
-"code_region";"code_region";"Code de la région";"integer";"default";;;;"annuel";"unique";"INSEE"
-"departement";"departement";"Nom du département";"string";"default";;;;"annuel";"unique";"INSEE"
-"code_departement";"code_departement";"Code du département";"integer";"default";;;;"annuel";"unique";"INSEE"
-"nom_epci";"nom_epci";"Nom de l’EPCI";"string";"default";;;;"annuel";;"INSEE"
-"code_epci";"code_epci";"Code de l’EPCI";"integer";"default";;;;"annuel";"unique";"INSEE"
-"pop_epci";"pop_epci";"Population de l’EPCI";"integer";"default";;;;"annuel";;"INSEE"
-"pop_uc";"pop_uc";"Population des communes appartenant à l’unité de coopération";"integer";"default";;;;"annuel";;
-"qui_suit_enquete";"qui_suit_enquete";"Structure référente pour l’enquête annuelle";"string";"default";;;"OLP, Administrateur partenaire";"annuel";;
-"lieu_referent_nom";"lieu_referent_nom";"Bibliothèque référente de l’unité de coopération";"string";"default";;;;"annuel";;
-"lieu_referent_GUID";"lieu_referent_GUID";"Adresse de la bibliothèque référente de l’unité de coopération ";"string";"default";;;;"annuel";;
-"lieu_referent_com";"lieu_referent_com";"Commune de la bibliothèque référente de l’unité de coopération ";"string";"default";;;;"annuel";;
-"lieu_referent_insee";"lieu_referent_insee";"Numéro INSEE de la commune de la bibliothèque référente de l’unité de coopération ";"string";"default";;;;"annuel";;
-"responsable_civilite";"responsable_civilite";"Civilité de la personne responsable de la bibliothèque référente";"string";"default";;;"M., Mme";"annuel";;
-"responsable_nom";"responsable_nom";"Nom de la personne responsable de la bibliothèque";"string";"default";;;;"annuel";;
-"responsable_prenom";"responsable_prenom";"Prénom de la personne responsable de la bibliothèque référente";"string";"default";;;;"annuel";;
-"responsable_statut";"responsable_statut";"Statut et grade de la personne responsable de la bibliothèque référente";"string";"default";;;;"annuel";;
-"responsable_remail";"responsable_remail";"Adresse de courriel de la personne responsable de la bibliothèque référente";"string";"default";;;;"annuel";"email";
-"responsable_remail_autre";"responsable_remail_autre";"Adresse de courriel alternative";"string";"default";;;;"annuel";"email";
-"statut";"statut_activite";"Statut d’activité de l’unité de coopération";"string";"default";;;"Actif, Inactif";"annuel";;
-"commentaire";"commentaire";"Commentaire sur l’unité de coopération";"string";"default";;;;"annuel";;
-"Avancement";"avancement";"Niveau de remplissage du rapport";"string";"default";;;"Vide, 0-100";"annuel";;
-"nom_lieu";"nom_lieu";"Nom de la bibliothèque appartenant à l’unité de coopération";"string";"default";;;;"annuel";;
-"id_lieu";"id_lieu";"Identifiant interne Neoscrib de la bibliothèque appartenant à l’unité de coopération";"string";"default";;;;"annuel";;
-"commune_lieu";"commune_lieu";"Commune de la bibliothèque appartenant à l’unité de coopération";"string";"default";;;;"annuel";;
-"insee_lieu";"insee_lieu";"Numéro INSEE de la commune de la bibliothèque appartenant à l’unité de coopération";"integer";"default";;;;"annuel";;"INSEE"
-"code_lieu";"code_lieu";"Code Neoscrib de la bibliothèque appartenant à l’unité de coopération";"string";"default";;;;"annuel";;
-"Statut Rapport";"statut_rapport";"Etat du rapport sur l’unité de coopération";"string";"default";;;"Vide, en cours, validé, envoyé";"annuel";;
-"Taux";"taux_completude";"Taux de remplissage du rapport";"integer";"default";;;;"annuel";;
-"Année des données";"annee_donnees";"Année des données collectées";"date";"default";;;;"annuel";;
+code;libellé;description;type;format;minimum;maximum;enum;granularity;constraint;reference
+GenUID;gen_uid;Identifiant interne Neoscrib de l’unité de coopération;string;default;;;;annuel;;
+code_uc;code_uc;Code de l’unité de coopération;string;default;;;;annuel;unique;Neoscrib
+nom_uc;nom_uc;Nom de l’unité de coopération;string;default;;;;annuel;unique;Neoscrib
+type;type;Type de coopération ;string;default;;;1a, 1a - 2a, 1a - 2b, 1b, 1b - 2a, 1b - 2b, 2a, 2b, 3a, 3b, 3b - 1a, 3b - 1a - 2a, 3b - 1b, 3b - 1b - 2a, 3b - 1b - 2b, 3b - 2a;annuel;;
+coop_informatique;coop_informatique;Coopération informatique oui/non;boolean;default;;;;annuel;;
+coop_sigb;coop_sigb;SIGB mutualisé oui/non;boolean;default;;;;annuel;;
+coop_coordination;coop_coordination;Coordination de l’action culturelle oui/non;boolean;default;;;;annuel;;
+coop_acquisition;coop_acquisition;Acquisitions mutualisées oui/non;boolean;default;;;;annuel;;
+unite_administrative;unite_administrative;Type d’unité administrative de rattachement;string;default;;;Municipale, Intercommunale;annuel;;
+region;region;Nom de la région;string;default;;;;annuel;unique;INSEE
+code_region;code_region;Code de la région;integer;default;;;;annuel;unique;INSEE
+departement;departement;Nom du département;string;default;;;;annuel;unique;INSEE
+code_departement;code_departement;Code du département;integer;default;;;;annuel;unique;INSEE
+nom_epci;nom_epci;Nom de l’EPCI;string;default;;;;annuel;;INSEE
+code_epci;code_epci;Code de l’EPCI;integer;default;;;;annuel;unique;INSEE
+pop_epci;pop_epci;Population de l’EPCI;integer;default;;;;annuel;;INSEE
+pop_uc;pop_uc;Population des communes appartenant à l’unité de coopération;integer;default;;;;annuel;;
+qui_suit_enquete;qui_suit_enquete;Structure référente pour l’enquête annuelle;string;default;;;OLP, Administrateur partenaire;annuel;;
+lieu_referent_nom;lieu_referent_nom;Bibliothèque référente de l’unité de coopération;string;default;;;;annuel;;
+lieu_referent_GUID;lieu_referent_GUID;Adresse de la bibliothèque référente de l’unité de coopération ;string;default;;;;annuel;;
+lieu_referent_com;lieu_referent_com;Commune de la bibliothèque référente de l’unité de coopération ;string;default;;;;annuel;;
+lieu_referent_insee;lieu_referent_insee;Numéro INSEE de la commune de la bibliothèque référente de l’unité de coopération ;string;default;;;;annuel;;
+responsable_civilite;responsable_civilite;Civilité de la personne responsable de la bibliothèque référente;string;default;;;M., Mme;annuel;;
+responsable_nom;responsable_nom;Nom de la personne responsable de la bibliothèque;string;default;;;;annuel;;
+responsable_prenom;responsable_prenom;Prénom de la personne responsable de la bibliothèque référente;string;default;;;;annuel;;
+responsable_statut;responsable_statut;Statut et grade de la personne responsable de la bibliothèque référente;string;default;;;;annuel;;
+responsable_remail;responsable_remail;Adresse de courriel de la personne responsable de la bibliothèque référente;string;default;;;;annuel;email;
+responsable_remail_autre;responsable_remail_autre;Adresse de courriel alternative;string;default;;;;annuel;email;
+statut;statut_activite;Statut d’activité de l’unité de coopération;string;default;;;Actif, Inactif;annuel;;
+commentaire;commentaire;Commentaire sur l’unité de coopération;string;default;;;;annuel;;
+Avancement;avancement;Niveau de remplissage du rapport;string;default;;;Vide, 0-100;annuel;;
+nom_lieu;nom_lieu;Nom de la bibliothèque appartenant à l’unité de coopération;string;default;;;;annuel;;
+id_lieu;id_lieu;Identifiant interne Neoscrib de la bibliothèque appartenant à l’unité de coopération;string;default;;;;annuel;;
+commune_lieu;commune_lieu;Commune de la bibliothèque appartenant à l’unité de coopération;string;default;;;;annuel;;
+insee_lieu;insee_lieu;Numéro INSEE de la commune de la bibliothèque appartenant à l’unité de coopération;integer;default;;;;annuel;;INSEE
+code_lieu;code_lieu;Code Neoscrib de la bibliothèque appartenant à l’unité de coopération;string;default;;;;annuel;;
+Statut Rapport;statut_rapport;Etat du rapport sur l’unité de coopération;string;default;;;Vide, en cours, validé, envoyé;annuel;;
+Taux;taux_completude;Taux de remplissage du rapport;integer;default;;;;annuel;;
+Année des données;annee_donnees;Année des données collectées;date;default;;;;annuel;;

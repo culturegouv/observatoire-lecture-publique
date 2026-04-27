@@ -226,7 +226,7 @@
       "type": "boolean"
     },
     {
-      "name": "ress_num_acq_livres_fournisseurs",
+      "name": "ress_num_acq_livres_audio_fournisseurs",
       "title": "D524",
       "description": "Ressources numériques acquises - bouquets - livres enregistrés - nom des offres",
       "type": "string"
@@ -1234,7 +1234,7 @@
       "type": "integer"
     },
     {
-      "name": "cooperation_autres",
+      "name": "cooperation_autres_institutions",
       "title": "H126",
       "description": "Partenariat et coopération - Institutions - Autres",
       "type": "boolean"
