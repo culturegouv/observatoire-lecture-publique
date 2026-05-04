@@ -13,13 +13,13 @@
     {
       "name": "type_rapport",
       "title": "Type rapport",
-      "description": "Type de rapport : abrégé / basique / patrimoine",
+      "description": "Type de rapport : Abrégé / Basique / Patrimoine",
       "type": "string",
       "constraints": {
         "enum": [
-          "abrégé",
-          "basique",
-          "patrimoine"
+          "Abrégé",
+          "Basique",
+          "Patrimoine"
         ]
       }
     },
@@ -274,7 +274,7 @@
       "type": "boolean"
     },
     {
-      "name": "ress_num_acq_apprentissag_fournisseurs",
+      "name": "ress_num_acq_apprentissage_fournisseurs",
       "title": "D534",
       "description": "Ressources numériques acquises - bouquets - apprentissage en ligne - nom des offres",
       "type": "string"
@@ -634,7 +634,7 @@
       "type": "integer"
     },
     {
-      "name": "depenses_fonctionnement_communnication",
+      "name": "depenses_fonctionnement_communication",
       "title": "F508",
       "description": "Dépenses de fonctionnement - Dépenses spécifiques - Communication",
       "type": "integer"
@@ -1054,7 +1054,7 @@
       "type": "integer"
     },
     {
-      "name": "formation_rofessionnelle_nb_jours",
+      "name": "formation_professionnelle_nb_jours",
       "title": "G205",
       "description": "Formation - Formation professionnelle - Nombre de jours",
       "type": "integer"
@@ -1066,7 +1066,7 @@
       "type": "integer"
     },
     {
-      "name": "formations_dispensees_pesonnel_nb_jours",
+      "name": "formations_dispensees_personnel_nb_jours",
       "title": "G207",
       "description": "Formation - Formations dispensées par le personnel - Nombre de jours",
       "type": "integer"
@@ -1738,7 +1738,7 @@
       "type": "boolean"
     },
     {
-      "name": "actions_cooperation_intenationale",
+      "name": "actions_cooperation_internationale",
       "title": "H607",
       "description": "Actions de coopération - Coopération internationale",
       "type": "boolean"
@@ -2034,7 +2034,7 @@
     {
       "name": "commentaires",
       "title": "I101",
-      "description": "Commentaires",
+      "description": "Commentaires sur les données d'activité du réseau",
       "type": "string"
     },
     {
@@ -2065,7 +2065,7 @@
       "name": "code_epci",
       "title": "Code EPCI",
       "description": "Code de l’EPCI",
-      "type": "string"
+      "type": "integer"
     },
     {
       "name": "epci",

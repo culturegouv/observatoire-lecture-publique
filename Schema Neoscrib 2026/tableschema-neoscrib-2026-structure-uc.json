@@ -25,9 +25,6 @@
       "title": "nom_uc",
       "description": "Nom de l’unité de coopération",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
       "source": "Neoscrib"
     },
     {
@@ -97,9 +94,7 @@
       "title": "region",
       "description": "Nom de la région",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -107,9 +102,7 @@
       "title": "code_region",
       "description": "Code de la région",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -117,9 +110,7 @@
       "title": "departement",
       "description": "Nom du département",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -127,9 +118,7 @@
       "title": "code_departement",
       "description": "Code du département",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -144,9 +133,7 @@
       "title": "code_epci",
       "description": "Code de l’EPCI",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -229,7 +216,7 @@
       "type": "string"
     },
     {
-      "name": "responsable_remail",
+      "name": "responsable_courriel",
       "title": "responsable_remail",
       "description": "Adresse de courriel de la personne responsable de la bibliothèque référente",
       "type": "string",
@@ -238,7 +225,7 @@
       }
     },
     {
-      "name": "responsable_remail_autre",
+      "name": "responsable_courriel_autre",
       "title": "responsable_remail_autre",
       "description": "Adresse de courriel alternative",
       "type": "string",
@@ -259,7 +246,7 @@
       }
     },
     {
-      "name": "commentaire",
+      "name": "commentaire_uc",
       "title": "commentaire",
       "description": "Commentaire sur l’unité de coopération",
       "type": "string"
@@ -268,12 +255,10 @@
       "name": "avancement",
       "title": "Avancement",
       "description": "Niveau de remplissage du rapport",
-      "type": "string",
+      "type": "integer",
       "constraints": {
-        "enum": [
-          "Vide",
-          "0-100"
-        ]
+        "minimum": 0,
+        "maximum": 100
       }
     },
     {

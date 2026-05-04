@@ -1,17 +1,17 @@
 code;libellé;description;type;format;minimum;maximum;enum;granularity;constraint;reference
 BM;commune_bib;Commune de la bibliothèque;string;default;;;;;;
-Type rapport;type_rapport;Type de rapport : abrégé / basique / patrimoine;string;default;;;abrégé, basique, patrimoine;;;
+Type rapport;type_rapport;Type de rapport : Abrégé / Basique / Patrimoine;string;default;;;Abrégé, Basique, Patrimoine;;;
 Avancement;etat_avancement;Etat d’avancement du remplissage du rapport;integer;default;0;100;;;;
 Typologie;typologie;Typologie des bibliothèques, après 2023;string;default;;;A, B, C, D, E;;;
 Typologie2C;typologie_2c;Typologie des bibliothèques, avant 2023;string;default;;;B1, B2, B3, B4, B5;;;
 Code;code_bib;Code de la bibliothèque;string;default;;;;annuel;unique;Neoscrib
 A101;nom_etablissement;Nom de l'établissement;string;default;;;;;;
-A102;libelle_etablissement;Complément au nom de l’établissement;string;default;;;;;;
+A102;complement_nom_etablissement;Complément au nom de l’établissement;string;default;;;;;;
 A103;complement_adresse;Complément d'adresse;string;default;;;;;;
 A104;numero_voie;N°;string;default;;;;;;
 A105;type_voie;Type voie;string;default;;;;;;
 A106;nom_voie;Nom voie;string;default;;;;;;
-A107;code_postal;Code postal;integer;default;;;;;;
+A107;code_postal;Code postal;string;default;;;;;;
 A108;ville;Ville;string;default;;;;;;
 A109;cedex;Cedex;string;default;;;;;;
 A112;telephone;Téléphone *;integer;default;;;;;;
@@ -125,7 +125,7 @@ D530;ress_num_acq_video_fournisseurs;Ressources numériques acquises - bouquets 
 D531;ress_num_acq_presse;Ressources numériques acquises - bouquets - presse - boolean;boolean;default;;;;;;
 D532;ress_num_acq_presse_fournisseurs;Ressources numériques acquises - bouquets - presse - nom des offres;string;default;;;;;;
 D533;ress_num_acq_apprentissage;Ressources numériques acquises - bouquets - apprentissage en ligne - boolean;boolean;default;;;;;;
-D534;ress_num_acq_apprentissag_fournisseurs;Ressources numériques acquises - bouquets - apprentissage en ligne - nom des offres;string;default;;;;;;
+D534;ress_num_acq_apprentissage_fournisseurs;Ressources numériques acquises - bouquets - apprentissage en ligne - nom des offres;string;default;;;;;;
 D537;ress_num_acq_autres;Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - boolean;boolean;default;;;;;;
 D538;ress_num_acq_autres_fournisseurs;Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - nom des offres;string;default;;;;;;
 D551;ress_num_via_bd;La bibliothèque propose-t-elle des ressources numériques via la BD ?;boolean;default;;;;;;
@@ -265,7 +265,7 @@ F403;depenses_patrimoine_numerisation;Patrimoine - Dépenses d’acquisition et 
 F502;depenses_fonctionnement_action_culturelle;Dépenses de fonctionnement - Dépenses spécifiques - Action culturelle;integer;default;;;;;;
 F504;depenses_fonctionnement_informatique;Dépenses de fonctionnement - Dépenses spécifiques - Dépenses informatiques;integer;default;;;;;;
 F507;depenses_fonctionnement_equipement;Dépenses de fonctionnement - Dépenses spécifiques - Équipement des documents;integer;default;;;;;;
-F508;depenses_fonctionnement_communnication;Dépenses de fonctionnement - Dépenses spécifiques - Communication;integer;default;;;;;;
+F508;depenses_fonctionnement_communication;Dépenses de fonctionnement - Dépenses spécifiques - Communication;integer;default;;;;;;
 F601;recettes_subventions_publiques;Recettes - Ressources propres et subventions - Subventions d’origine publique;integer;default;;;;;;
 F602;recettes_subventions_privées;Recettes - Ressources propres et subventions - Autres ressources d'origine privée (sociétés, particuliers, …);integer;default;;;;;;
 F603;recettes_propres_total;Recettes - Ressources propres et subventions - Recettes propres;integer;default;;;;;;
@@ -335,9 +335,9 @@ G158;postes_vacants_categorie_b;Postes de catégorie B non occupés plus de 6 mo
 G159;postes_vacants_categorie_c;Postes de catégorie C non occupés plus de 6 mois dans l'année;integer;default;;;;;;
 G202;formation_personnel_nb_personnes_formees;Formation - Formation du personnel - Nombre de personnes formées;integer;default;;;;;;
 G204;formation_reseau_nb_personnes_formees;Formation - Formation des acteurs du tiers réseau - Nombre de personnes formées;integer;default;;;;;;
-G205;formation_rofessionnelle_nb_jours;Formation - Formation professionnelle - Nombre de jours;integer;default;;;;;;
+G205;formation_professionnelle_nb_jours;Formation - Formation professionnelle - Nombre de jours;integer;default;;;;;;
 G206;formation_professionnelle_nb_participants;Formation - Formation professionnelle - Nombre de participants;integer;default;;;;;;
-G207;formations_dispensees_pesonnel_nb_jours;Formation - Formations dispensées par le personnel - Nombre de jours;integer;default;;;;;;
+G207;formations_dispensees_personnel_nb_jours;Formation - Formations dispensées par le personnel - Nombre de jours;integer;default;;;;;;
 G211;formation_personnel_nb_jours;Formation - Formation du personnel - Nombre de jours;integer;default;;;;;;
 G213;formation_reseau_nb_jours;Formation - Formation des acteurs du tiers réseau - Nombre de jours;integer;default;;;;;;
 H101;cooperation_ecoles;Partenariat et coopération - Institutions - Établissements scolaires et universitaires - Écoles;boolean;default;;;;;;
@@ -463,7 +463,7 @@ H505;actions_hors_les_murs_portage_nb_actions;Actions hors de l'établissement -
 H506;actions_hors_les_murs_portage_nb_participants;Actions hors de l'établissement - Portage à domicile - Nombre de participants;integer;default;;;;;;
 H601;actions_cooperation_locale;Actions de coopération - Coopération locale;boolean;default;;;;;;
 H604;actions_cooperation_nationale;Actions de coopération - Coopération nationale;boolean;default;;;;;;
-H607;actions_cooperation_intenationale;Actions de coopération - Coopération internationale;boolean;default;;;;;;
+H607;actions_cooperation_internationale;Actions de coopération - Coopération internationale;boolean;default;;;;;;
 H611;actions_cooperation_locale_catalogue;Actions de coopération - Coopération locale - Catalogue commun;boolean;default;;;;;;
 H612;actions_cooperation_locale_portail;Actions de coopération - Coopération locale - Portail documentaire commun;boolean;default;;;;;;
 H613;actions_cooperation_locale_poldoc;Actions de coopération - Coopération locale - Politique documentaire commune;boolean;default;;;;;;
@@ -512,7 +512,7 @@ H807;artotheque;Services physiques de la bibliothèque - Artothèque;boolean;def
 H808;boite_de_retour;Services physiques de la bibliothèque - Boite de retour;boolean;default;;;;;;
 H809;ludotheque;Services physiques de la bibliothèque - Ludothèque;boolean;default;;;;;;
 H810;studio;Services physiques de la bibliothèque – Studio de répétition ou d’enregistrement;boolean;default;;;;;;
-I101;commentaires;Commentaires;string;default;;;;;;
+I101;commentaires;Commentaires sur les données d’activité de la bibliothèque ou du réseau;string;default;;;;;;
 J201;gratuite_services;Inscription et tarifs - L'inscription et le prêt sont-ils gratuits pour tous les usagers ?;boolean;default;;;;;;
 J601;local_specifique;Usage des locaux - Disposez-vous d'un local spécifique pour la bibliothèque ?;boolean;default;;;;;;
 K101;montant_acquisitions_pat;Patrimoine - Dépenses d’acquisition et d’entretien des collections patrimoniales - Acquisition;integer;default;;;;;;
@@ -638,7 +638,7 @@ K546;patrimoine_mise_en_ligne_images_animees_annee;Patrimoine - Mise en ligne - 
 insee;code_insee;Code insee de la commune;string;default;;;;;;
 Département;departement;Département de la commune;string;default;;;;;;
 Région;region;Région de la commune;string;default;;;;;;
-Code EPCI;code_epci;Code de l’EPCI;string;default;;;;;;
+Code EPCI;code_epci;Code de l’EPCI;integer;default;;;;;;
 Libellé EPCI;epci;Libellé de l’EPCI;string;default;;;;;;
 Date dernière modification;date_modification;Date de dernière modification des données;date;default;;;;quotidien;;
 Taux de complétude;taux_completude;Taux de complétude;integer;default;;;;;;

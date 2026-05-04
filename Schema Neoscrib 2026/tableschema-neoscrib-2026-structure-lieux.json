@@ -80,9 +80,6 @@
       "title": "Région / Code",
       "description": "Nom de la région",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
       "source": "INSEE"
     },
     {
@@ -90,9 +87,7 @@
       "title": "{Code Région}",
       "description": "Code de la région",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -100,9 +95,7 @@
       "title": "Département / Code",
       "description": "Nom du département",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -110,9 +103,7 @@
       "title": "{Code Département}",
       "description": "Code du département",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -136,13 +127,11 @@
       "type": "string"
     },
     {
-      "name": "code_insee_commune",
+      "name": "code_insee",
       "title": "Code insee commune",
       "description": "Code INSEE de la collectivité",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -165,9 +154,7 @@
       "title": "Code EPCI",
       "description": "Code EPCI",
       "type": "integer",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
@@ -353,13 +340,11 @@
       "title": "Code Département de la BD pour contrôle",
       "description": "Code du département de la bibliothèque départementale de rattachement",
       "type": "string",
-      "constraints": {
-        "unique": true
-      },
+      
       "source": "INSEE"
     },
     {
-      "name": "commentaire",
+      "name": "commentaire_lieu",
       "title": "Commentaire",
       "description": "Commentaire sur le bâtiment de la bibliothèque",
       "type": "string"
