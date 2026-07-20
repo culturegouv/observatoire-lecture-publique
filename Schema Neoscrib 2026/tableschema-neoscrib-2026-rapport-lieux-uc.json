@@ -763,7 +763,7 @@
     {
       "name": "ress_num_acq_livres",
       "title": "D521",
-      "description": "Ressources numériques acquises - bouquets - livres - boolean",
+      "description": "Ressources numériques acquises - bouquets - livres",
       "type": "boolean"
     },
     {
@@ -775,7 +775,7 @@
     {
       "name": "ress_num_acq_livres_audio",
       "title": "D523",
-      "description": "Ressources numériques acquises - bouquets - livres enregistrés - boolean",
+      "description": "Ressources numériques acquises - bouquets - livres enregistrés",
       "type": "boolean"
     },
     {
@@ -787,7 +787,7 @@
     {
       "name": "ress_num_acq_musique",
       "title": "D527",
-      "description": "Ressources numériques acquises - bouquets - musique - boolean",
+      "description": "Ressources numériques acquises - bouquets - musique",
       "type": "boolean"
     },
     {
@@ -799,7 +799,7 @@
     {
       "name": "ress_num_acq_video",
       "title": "D529",
-      "description": "Ressources numériques acquises - bouquets - vidéo - boolean",
+      "description": "Ressources numériques acquises - bouquets - vidéo",
       "type": "boolean"
     },
     {
@@ -811,7 +811,7 @@
     {
       "name": "ress_num_acq_presse",
       "title": "D531",
-      "description": "Ressources numériques acquises - bouquets - presse - boolean",
+      "description": "Ressources numériques acquises - bouquets - presse",
       "type": "boolean"
     },
     {
@@ -823,7 +823,7 @@
     {
       "name": "ress_num_acq_apprentissage",
       "title": "D533",
-      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne - boolean",
+      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne",
       "type": "boolean"
     },
     {
@@ -835,7 +835,7 @@
     {
       "name": "ress_num_acq_autres",
       "title": "D537",
-      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - boolean",
+      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques",
       "type": "boolean"
     },
     {
@@ -859,7 +859,7 @@
     {
       "name": "ress_num_acq_jv",
       "title": "D553",
-      "description": "Jeux vidéo dématérialisés - boolean",
+      "description": "Jeux vidéo dématérialisés",
       "type": "boolean"
     },
     {
@@ -877,7 +877,7 @@
     {
       "name": "ress_num_prod_musique",
       "title": "D611",
-      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores - boolean",
+      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores",
       "type": "boolean"
     },
     {
@@ -889,7 +889,7 @@
     {
       "name": "ress_num_prod_video",
       "title": "D614",
-      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations) - boolean",
+      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations)",
       "type": "boolean"
     },
     {
@@ -901,7 +901,7 @@
     {
       "name": "ress_num_prod_signalement",
       "title": "D620",
-      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites - boolean",
+      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites",
       "type": "boolean"
     },
     {
@@ -913,7 +913,7 @@
     {
       "name": "ress_num_prod_ress_pedagogique",
       "title": "D626",
-      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques - boolean",
+      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques",
       "type": "boolean"
     },
     {
@@ -3175,7 +3175,7 @@
     {
       "name": "patrimoine_livres_imprimes",
       "title": "K201",
-      "description": "Patrimoine - fonds et acquisitions - livres imprimés - boolean",
+      "description": "Patrimoine - fonds et acquisitions - livres imprimés",
       "type": "boolean"
     },
     {
@@ -3211,7 +3211,7 @@
     {
       "name": "patrimoine_periodiques",
       "title": "K211",
-      "description": "Patrimoine - fonds et acquisitions - publications en série - boolean",
+      "description": "Patrimoine - fonds et acquisitions - publications en série",
       "type": "boolean"
     },
     {
@@ -3229,13 +3229,13 @@
     {
       "name": "patrimoine_manuscrits",
       "title": "K214",
-      "description": "Patrimoine - fonds et acquisitions - manuscrits - boolean",
+      "description": "Patrimoine - fonds et acquisitions - manuscrits",
       "type": "boolean"
     },
     {
       "name": "patrimoine_archives",
       "title": "K215",
-      "description": "Patrimoine - fonds et acquisitions - documents d’archives - boolean",
+      "description": "Patrimoine - fonds et acquisitions - documents d’archives",
       "type": "boolean"
     },
     {
@@ -3253,7 +3253,7 @@
     {
       "name": "patrimoine_cartes",
       "title": "K218",
-      "description": "Patrimoine - fonds et acquisitions - cartes - boolean",
+      "description": "Patrimoine - fonds et acquisitions - cartes",
       "type": "boolean"
     },
     {
@@ -3271,7 +3271,7 @@
     {
       "name": "patrimoine_musique",
       "title": "K221",
-      "description": "Patrimoine - fonds et acquisitions - musique imprimée - boolean",
+      "description": "Patrimoine - fonds et acquisitions - musique imprimée",
       "type": "boolean"
     },
     {
@@ -3289,7 +3289,7 @@
     {
       "name": "patrimoine_documents_graphiques",
       "title": "K224",
-      "description": "Patrimoine - fonds et acquisitions - documents graphiques - boolean",
+      "description": "Patrimoine - fonds et acquisitions - documents graphiques",
       "type": "boolean"
     },
     {
@@ -3307,7 +3307,7 @@
     {
       "name": "patrimoine_objets",
       "title": "K227",
-      "description": "Patrimoine - fonds et acquisitions - objets - boolean",
+      "description": "Patrimoine - fonds et acquisitions - objets",
       "type": "boolean"
     },
     {
@@ -3325,7 +3325,7 @@
     {
       "name": "patrimoine_documents_sonores",
       "title": "K230",
-      "description": "Patrimoine - fonds et acquisitions - documents sonores sur support - boolean",
+      "description": "Patrimoine - fonds et acquisitions - documents sonores sur support",
       "type": "boolean"
     },
     {
@@ -3343,7 +3343,7 @@
     {
       "name": "patrimoine_images_animees",
       "title": "K233",
-      "description": "Patrimoine - fonds et acquisitions - images animées sur support - boolean",
+      "description": "Patrimoine - fonds et acquisitions - images animées sur support",
       "type": "boolean"
     },
     {
@@ -3373,7 +3373,7 @@
     {
       "name": "patrimoine_dons",
       "title": "K241",
-      "description": "Entrées par dons, legs et dations - boolean",
+      "description": "Entrées par dons, legs et dations",
       "type": "boolean"
     },
     {

@@ -210,7 +210,7 @@
     {
       "name": "ress_num_acq_livres",
       "title": "D521",
-      "description": "Ressources numériques acquises - bouquets - livres - boolean",
+      "description": "Ressources numériques acquises - bouquets - livres",
       "type": "boolean"
     },
     {
@@ -222,7 +222,7 @@
     {
       "name": "ress_num_acq_livres_audio",
       "title": "D523",
-      "description": "Ressources numériques acquises - bouquets - livres enregistrés - boolean",
+      "description": "Ressources numériques acquises - bouquets - livres enregistrés",
       "type": "boolean"
     },
     {
@@ -234,7 +234,7 @@
     {
       "name": "ress_num_acq_musique",
       "title": "D527",
-      "description": "Ressources numériques acquises - bouquets - musique - boolean",
+      "description": "Ressources numériques acquises - bouquets - musique",
       "type": "boolean"
     },
     {
@@ -246,7 +246,7 @@
     {
       "name": "ress_num_acq_video",
       "title": "D529",
-      "description": "Ressources numériques acquises - bouquets - vidéo - boolean",
+      "description": "Ressources numériques acquises - bouquets - vidéo",
       "type": "boolean"
     },
     {
@@ -258,7 +258,7 @@
     {
       "name": "ress_num_acq_presse",
       "title": "D531",
-      "description": "Ressources numériques acquises - bouquets - presse - boolean",
+      "description": "Ressources numériques acquises - bouquets - presse",
       "type": "boolean"
     },
     {
@@ -270,7 +270,7 @@
     {
       "name": "ress_num_acq_apprentissage",
       "title": "D533",
-      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne - boolean",
+      "description": "Ressources numériques acquises - bouquets - apprentissage en ligne",
       "type": "boolean"
     },
     {
@@ -282,7 +282,7 @@
     {
       "name": "ress_num_acq_autres",
       "title": "D537",
-      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - boolean",
+      "description": "Ressources numériques acquises - bouquets - autres bouquets de ressources numériques",
       "type": "boolean"
     },
     {
@@ -306,7 +306,7 @@
     {
       "name": "ress_num_acq_jv",
       "title": "D553",
-      "description": "Jeux vidéo dématérialisés - boolean",
+      "description": "Jeux vidéo dématérialisés",
       "type": "boolean"
     },
     {
@@ -324,7 +324,7 @@
     {
       "name": "ress_num_prod_musique",
       "title": "D611",
-      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores - boolean",
+      "description": "Ressources numériques produites par l’établissement - Musique, enregistrements sonores",
       "type": "boolean"
     },
     {
@@ -336,7 +336,7 @@
     {
       "name": "ress_num_prod_video",
       "title": "D614",
-      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations) - boolean",
+      "description": "Ressources numériques produites par l’établissement - Vidéo (dont captations)",
       "type": "boolean"
     },
     {
@@ -348,7 +348,7 @@
     {
       "name": "ress_num_prod_signalement",
       "title": "D620",
-      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites - boolean",
+      "description": "Ressources numériques produites par l’établissement - Signalement de ressources gratuites",
       "type": "boolean"
     },
     {
@@ -360,7 +360,7 @@
     {
       "name": "ress_num_prod_ress_pedagogique",
       "title": "D626",
-      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques - boolean",
+      "description": "Ressources numériques produites par l’établissement - Ressources pédagogiques",
       "type": "boolean"
     },
     {
