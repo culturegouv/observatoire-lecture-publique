@@ -36,7 +36,7 @@
     {
       "name": "typologie",
       "title": "Typologie",
-      "description": "Typologie des bibliothèques, après 2023",
+      "description": "Typologie des bibliothèques, après 2023. Pour en savoir plus, consulter la page https://www.abd-asso.org/documentations/evaluation/une-nouvelle-typologie-pour-les-bibliotheques/",
       "type": "string",
       "constraints": {
         "enum": [

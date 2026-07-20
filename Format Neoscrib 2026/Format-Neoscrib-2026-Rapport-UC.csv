@@ -2,7 +2,7 @@ code;libellé;description;type;format;minimum;maximum;enum;granularity;constrain
 BM;commune_bib;Commune de la bibliothèque;string;default;;;;;;
 Type rapport;type_rapport;Type de rapport : Abrégé / Basique / Patrimoine;string;default;;;Abrégé, Basique, Patrimoine;;;
 Avancement;etat_avancement;Etat d’avancement du remplissage du rapport;integer;default;0;100;;;;
-Typologie;typologie;Typologie des bibliothèques, après 2023;string;default;;;A, B, C, D, E;;;
+Typologie;typologie;Typologie des bibliothèques, après 2023. Pour en savoir plus, consulter la page https://www.abd-asso.org/documentations/evaluation/une-nouvelle-typologie-pour-les-bibliotheques/;string;default;;;A, B, C, D, E;;;
 Typologie2C;typologie_2c;Typologie des bibliothèques, avant 2023;string;default;;;B1, B2, B3, B4, B5;;;
 Code;code_bib;Code de la bibliothèque;string;default;;;;annuel;unique;Neoscrib
 A101;nom_etablissement;Nom de l'établissement;string;default;;;;;;
