@@ -1,6 +1,6 @@
 code;libellé;description;type;format;minimum;maximum;enum;granularity;constraint;reference
 BM;commune_bib;Commune de la bibliothèque;string;default;;;;;;
-Type rapport;type_rapport;Type de rapport : Abrégé / Basique / Patrimoine;string;default;;;Abrégé, Basique, Patrimoine;;;
+Type rapport;type_rapport;Type de rapport: Abrégé / Basique / Patrimoine;string;default;;;Abrégé, Basique, Patrimoine;;;
 Avancement;etat_avancement;Etat d’avancement du remplissage du rapport;integer;default;0;100;;;;
 Typologie;typologie;Typologie des bibliothèques, après 2023. Pour en savoir plus, consulter la page https://www.abd-asso.org/documentations/evaluation/une-nouvelle-typologie-pour-les-bibliotheques/;string;default;;;A, B, C, D, E;;;
 Typologie2C;typologie_2c;Typologie des bibliothèques, avant 2023;string;default;;;B1, B2, B3, B4, B5;;;
@@ -34,7 +34,7 @@ C108;nb_postes_informatiques_pro;Nombre de postes informatiques professionnels a
 C110;nb_imprimantes_en_acces_public;Nombre d'imprimantes en accès public;integer;default;;;;;;
 C112;nb_bibliobus;Nombre de bibliobus;integer;default;;;;;;
 C115;nb_jours_ouverture_hebdos;Nombre de jours d’ouverture hebdomadaires;integer;default;0;7;;;;
-C116;ouverture_le_dimanche;La bibliothèque est-elle ouverte le dimanche ?;boolean;default;;;;;;
+C116;ouverture_le_dimanche;La bibliothèque est-elle ouverte le dimanche?;boolean;default;;;;;;
 C117;nb_tablettes_mises_a_disposition;Tablettes mises à la disposition du public;integer;default;;;;;;
 C118;nb_liseuses_mises_a_disposition;Liseuses mises à la disposition du public;integer;default;;;;;;
 C119;nb_bornes_decoute;Bornes d’écoute;integer;default;;;;;;
@@ -74,7 +74,7 @@ D315;documents_graphiques_acquisitions_um;Autres documents - Documents graphique
 D320;autres_documents_total_eliminations_um;Autres documents - UM - Total éliminations autres documents;integer;default;;;;;;
 D321;autres_documents_total_fonds_um;Autres documents - Totalisation Abrégé -Fonds;integer;default;;;;;;
 D322;autres_documents_total_acquisitions_um;Autres documents - Totalisation Abrégé -Acquisitions;integer;default;;;;;;
-D331;autres_types_documents;Est-ce que la bibliothèque possède d’autres types de documents ?;boolean;default;;;;;;
+D331;autres_types_documents;Est-ce que la bibliothèque possède d’autres types de documents?;boolean;default;;;;;;
 D332;jeux_societe_fonds;Jeux de société - Fonds;integer;default;;;;;;
 D333;jeux_societe_acquisitions;Jeux de société - Acquisitions;integer;default;;;;;;
 D334;objets_fonds;Objets - Fonds;integer;default;;;;;;
@@ -92,7 +92,7 @@ D409;documents_audiovisuels_support_total_documents_sonores_fonds_um;Documents a
 D410;documents_audiovisuels_support_total_documents_sonores_acquisitions_um;Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - Total Acquisitions;integer;default;;;;;;
 D411;documents_audiovisuels_support_total_documents_video_fonds_um;Documents audiovisuels sur support- Documents vidéo - Sur support (UM) - Total Fonds (hors desserte BD);integer;default;;;;;;
 D412;documents_audiovisuels_support_total_documents_video_acquisitions_um;Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Total Acquisitions;integer;default;;;;;;
-D416;documents_audiovisuels_support_musique_eliminations_um;Documents audiovisuels sur support - Documents sonores : musique: - Sur support (UM) - Total Éliminations;integer;default;;;;;;
+D416;documents_audiovisuels_support_musique_eliminations_um;Documents audiovisuels sur support - Documents sonores: musique: - Sur support (UM) - Total Éliminations;integer;default;;;;;;
 D417;documents_audiovisuels_support_livres_enregistres_eliminations_um;Documents audiovisuels sur support - Documents sonores : livres enregistrés -Sur support (UM) - Total Éliminations;integer;default;;;;;;
 D418;documents_audiovisuels_support_total_documents_sonores_eliminations_um;Documents audiovisuels sur support - Total documents sonores - Sur support (UM) - Total éliminations;integer;default;;;;;;
 D419;documents_audiovisuels_support_total_documents_video_eliminations_um;Documents audiovisuels sur support - Documents vidéo - Sur support (UM) - Total éliminations;integer;default;;;;;;
@@ -113,7 +113,7 @@ D445;documents_audiovisuels_support_jeux_video_acquisitions_um;Documents audiovi
 D446;documents_audiovisuels_support_jeux_video_eliminations_um;Documents audiovisuels sur support - Jeux vidéo - Sur support (UM) - Eliminations;integer;default;;;;;;
 D447;documents_audiovisuels_support_total_documents_sonores_depot_um;Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - En dépôt de la BD au 31 décembre;integer;default;;;;;;
 D448;documents_audiovisuels_support_total_documents_video_depot_um;Documents audiovisuels sur support- Total documents sonores - Sur support (UM) - En dépôt de la BD au 31 décembre;integer;default;;;;;;
-D450;fonds_cd_dvd;La bibliothèque possède-t-elle des fonds de CD ou de DVD ?;boolean;default;;;;;;
+D450;fonds_cd_dvd;La bibliothèque possède-t-elle des fonds de CD ou de DVD?;boolean;default;;;;;;
 D521;ress_num_acq_livres;Ressources numériques acquises - bouquets - livres;boolean;default;;;;;;
 D522;ress_num_acq_livres_fournisseurs;Ressources numériques acquises - bouquets - livres - nom des offres;string;default;;;;;;
 D523;ress_num_acq_livres_audio;Ressources numériques acquises - bouquets - livres enregistrés;boolean;default;;;;;;
@@ -128,11 +128,11 @@ D533;ress_num_acq_apprentissage;Ressources numériques acquises - bouquets - app
 D534;ress_num_acq_apprentissage_fournisseurs;Ressources numériques acquises - bouquets - apprentissage en ligne - nom des offres;string;default;;;;;;
 D537;ress_num_acq_autres;Ressources numériques acquises - bouquets - autres bouquets de ressources numériques;boolean;default;;;;;;
 D538;ress_num_acq_autres_fournisseurs;Ressources numériques acquises - bouquets - autres bouquets de ressources numériques - nom des offres;string;default;;;;;;
-D551;ress_num_via_bd;La bibliothèque propose-t-elle des ressources numériques via la BD ?;boolean;default;;;;;;
-D552;ress_num_acq;La bibliothèque propose-t-elle des ressources numériques propres ?;boolean;default;;;;;;
+D551;ress_num_via_bd;La bibliothèque propose-t-elle des ressources numériques via la BD?;boolean;default;;;;;;
+D552;ress_num_acq;La bibliothèque propose-t-elle des ressources numériques propres?;boolean;default;;;;;;
 D553;ress_num_acq_jv;Jeux vidéo dématérialisés;boolean;default;;;;;;
 D554;ress_num_acq_jv_fournisseurs;Jeux vidéo dématérialisés - Nom des offres;string;default;;;;;;
-D601;bib_prod_ress_num;La bibliothèque est-elle productrice de ressources numériques ( hors numérisation patrimoniale) ?;boolean;default;;;;;;
+D601;bib_prod_ress_num;La bibliothèque est-elle productrice de ressources numériques ( hors numérisation patrimoniale)?;boolean;default;;;;;;
 D611;ress_num_prod_musique;Ressources numériques produites par l’établissement - Musique, enregistrements sonores;boolean;default;;;;;;
 D613;ress_num_prod_musique_nb_docs;Ressources numériques produites par l’établissement - Musique, enregistrements sonores - nombre de documents produits dans l’année;integer;default;;;;;;
 D614;ress_num_prod_video;Ressources numériques produites par l’établissement - Vidéo (dont captations);boolean;default;;;;;;
@@ -141,7 +141,7 @@ D620;ress_num_prod_signalement;Ressources numériques produites par l’établis
 D622;ress_num_prod_signalement_nb_docs;Ressources numériques produites par l’établissement - Signalement de ressources gratuites - nombre de documents produits dans l’année;integer;default;;;;;;
 D626;ress_num_prod_ress_pedagogique;Ressources numériques produites par l’établissement - Ressources pédagogiques;boolean;default;;;;;;
 D628;ress_num_prod_ress_pedagogique_nb_docs;Ressources numériques produites par l’établissement - Ressources pédagogiques - nombre de documents produits dans l’année;integer;default;;;;;;
-D701;collections_adaptees;La bibliothèque propose-t-elle des collections adaptées ?;boolean;default;;;;;;
+D701;collections_adaptees;La bibliothèque propose-t-elle des collections adaptées?;boolean;default;;;;;;
 D702;braille;Braille;boolean;default;;;;;;
 D703;ouvrages_daisy;Ouvrages en Daisy;boolean;default;;;;;;
 D704;revues_synthese_vocale;Revues en synthèse vocale;boolean;default;;;;;;
@@ -310,14 +310,14 @@ G120;personnel_autres_filieres_categorie_c;Personnel - Fonction publique autres 
 G121;personnel_autres_filieres_etp_categorie_c;Personnel - Fonction publique autres filières - ETP - Catégorie C;integer;default;;;;;;
 G129;benevoles_total;Personnel - Bénévoles;integer;default;;;;;;
 G130;benevoles_qualifies_total;Personnel - Bénévoles - dont qualifiés;integer;default;;;;;;
-G131;benevoles_etp;Personnel - Bénévoles -« ETP »;integer;default;;;;;;
+G131;benevoles_etp;Personnel - Bénévoles -«ETP»;integer;default;;;;;;
 G132;personnel_etp_total;Personnel - ETP - Total;integer;default;;;;;;
 G133;personnel_culture_assistants_conservation;Personnel - Professionnels de la filière culture - Personnes - Assistants territoriaux de conservation;integer;default;;;;;;
 G134;personnel_culture_etp_assistants_conservation;Personnel - Professionnels de la filière culture - ETP- Assistants territoriaux de conservation;integer;default;;;;;;
 G135;personnel_salaries_total;Personnel - Total salariés - Personnes;integer;default;;;;;;
 G136;personnel_culture_etp_adjoints_patrimoine_qualifies;Personnel - Professionnels de la filière culture - ETP - Adjoints du patrimoine - dont qualifiés;integer;default;;;;;;
-G143;personnel_salarie;Une partie au moins du personnel est-elle salariée ?;boolean;default;;;;;;
-G144;benevoles;La bibliothèque fonctionne-t-elle avec des bénévoles ?;boolean;default;;;;;;
+G143;personnel_salarie;Une partie au moins du personnel est-elle salariée?;boolean;default;;;;;;
+G144;benevoles;La bibliothèque fonctionne-t-elle avec des bénévoles?;boolean;default;;;;;;
 G145;personnel_postes_categorie_a;Personnel - Nombre de postes de catégorie A/A+;integer;default;;;;;;
 G146;personnel_non_titulaires_categorie_a;Personnel - Catégorie A - non-titulaires;integer;default;;;;;;
 G147;personnel_etp_postes_categorie_a;Personnel - Catégorie A - non-titulaires - ETP;integer;default;;;;;;

@@ -13,7 +13,7 @@
     {
       "name": "type_rapport",
       "title": "Type rapport",
-      "description": "Type de rapport : Abrégé / Basique / Patrimoine",
+      "description": "Type de rapport: Abrégé / Basique / Patrimoine",
       "type": "string",
       "constraints": {
         "enum": [
@@ -280,7 +280,7 @@
     {
       "name": "ouverture_le_dimanche",
       "title": "C116",
-      "description": "La bibliothèque est-elle ouverte le dimanche ?",
+      "description": "La bibliothèque est-elle ouverte le dimanche?",
       "type": "boolean"
     },
     {
@@ -523,7 +523,7 @@
     {
       "name": "autres_types_documents",
       "title": "D331",
-      "description": "Est-ce que la bibliothèque possède d’autres types de documents ?",
+      "description": "Est-ce que la bibliothèque possède d’autres types de documents?",
       "type": "boolean"
     },
     {
@@ -631,7 +631,7 @@
     {
       "name": "documents_audiovisuels_support_musique_eliminations_um",
       "title": "D416",
-      "description": "Documents audiovisuels sur support - Documents sonores : musique: - Sur support (UM) - Total Éliminations",
+      "description": "Documents audiovisuels sur support - Documents sonores: musique: - Sur support (UM) - Total Éliminations",
       "type": "integer"
     },
     {
@@ -757,7 +757,7 @@
     {
       "name": "fonds_cd_dvd",
       "title": "D450",
-      "description": "La bibliothèque possède-t-elle des fonds de CD ou de DVD ?",
+      "description": "La bibliothèque possède-t-elle des fonds de CD ou de DVD?",
       "type": "boolean"
     },
     {
@@ -847,13 +847,13 @@
     {
       "name": "ress_num_via_bd",
       "title": "D551",
-      "description": "La bibliothèque propose-t-elle des ressources numériques via la BD ?",
+      "description": "La bibliothèque propose-t-elle des ressources numériques via la BD?",
       "type": "boolean"
     },
     {
       "name": "ress_num_acq",
       "title": "D552",
-      "description": "La bibliothèque propose-t-elle des ressources numériques propres ?",
+      "description": "La bibliothèque propose-t-elle des ressources numériques propres?",
       "type": "boolean"
     },
     {
@@ -871,7 +871,7 @@
     {
       "name": "bib_prod_ress_num",
       "title": "D601",
-      "description": "La bibliothèque est-elle productrice de ressources numériques ( hors numérisation patrimoniale) ?",
+      "description": "La bibliothèque est-elle productrice de ressources numériques ( hors numérisation patrimoniale)?",
       "type": "boolean"
     },
     {
@@ -925,7 +925,7 @@
     {
       "name": "collections_adaptees",
       "title": "D701",
-      "description": "La bibliothèque propose-t-elle des collections adaptées ?",
+      "description": "La bibliothèque propose-t-elle des collections adaptées?",
       "type": "boolean"
     },
     {
@@ -1939,7 +1939,7 @@
     {
       "name": "benevoles_etp",
       "title": "G131",
-      "description": "Personnel - Bénévoles -« ETP »",
+      "description": "Personnel - Bénévoles -«ETP»",
       "type": "integer"
     },
     {
@@ -1975,13 +1975,13 @@
     {
       "name": "personnel_salarie",
       "title": "G143",
-      "description": "Une partie au moins du personnel est-elle salariée ?",
+      "description": "Une partie au moins du personnel est-elle salariée?",
       "type": "boolean"
     },
     {
       "name": "benevoles",
       "title": "G144",
-      "description": "La bibliothèque fonctionne-t-elle avec des bénévoles ?",
+      "description": "La bibliothèque fonctionne-t-elle avec des bénévoles?",
       "type": "boolean"
     },
     {
