@@ -5,7 +5,7 @@ Code;code_bib;Code de la bibliothèque;string;default;;;;annuel;unique;Neoscrib
 Nom de l'établissement;nom_etablissement;Nom de l'établissement;string;default;;;;annuel;;
 "{Libellé 1}&nbsp;";libelle_etablissement;Libellé de l’établissement de tutelle;string;default;;;;annuel;;
 Complément;complement_nom_etablissement;Complément au nom de l'établissement;string;default;;;;annuel;;
-Adresse;adresse;Adresse de l’établissement (concaténation du numéro, dyu type et de la voie);string;default;;;;annuel;;
+Adresse;adresse;Adresse de l’établissement (concaténation du numéro, du type et de la voie);string;default;;;;annuel;;
 N° / Type voie / Nom voie;numero_voie;Numéro dans la voie;string;default;;;;annuel;;
 {Type voie};type_voie;Type de voie;string;default;;;;annuel;;
 {Nom voie};nom_voie;Nom de la voie;string;default;;;;annuel;;INSEE
